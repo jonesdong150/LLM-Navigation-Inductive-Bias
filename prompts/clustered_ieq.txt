@@ -1,0 +1,16 @@
+{scene_text}
+
+Question:
+{query_text}
+
+OUTPUT FORMAT:
+Answer: <your answer>
+
+[STRICT OUTPUT RULES]
+
+TaskType: {task_type}
+AnswerFormat: {answer_format}
+
+{strict_format_rules}
+
+[END STRICT OUTPUT RULES]

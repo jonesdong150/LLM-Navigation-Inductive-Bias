@@ -1,0 +1,16 @@
+You are given a description of an indoor environment containing multiple rooms with their coordinates, types, and objects. The environment also contains topology (door connections between rooms) and a movement history of a key object.
+
+{scene_text}
+
+You must follow the output format strictly. Do NOT output any reasoning, explanations, <think> blocks, or intermediate steps. Output ONLY the answer in the specified format.
+
+Question:
+{query_text}
+
+[STRICT OUTPUT RULES — VIOLATIONS WILL BE PENALIZED]
+TaskType: {task_type}
+AnswerFormat: {answer_format}
+{strict_format_rules}
+
+REMEMBER: Output EXACTLY in the specified format. No extra words, no reasoning, no markdown.
+[END STRICT OUTPUT RULES]

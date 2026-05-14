@@ -1,0 +1,10 @@
+You are given a description of an indoor environment.
+
+{scene_text}
+
+You must follow the output format strictly. Do NOT output any reasoning or <think>.
+Question:
+{query_text}
+
+OUTPUT FORMAT:
+Answer: <your answer>

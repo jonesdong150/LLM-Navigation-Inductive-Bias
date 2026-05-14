@@ -1,0 +1,14 @@
+You are given a description of an indoor environment.
+
+{scene_text}
+
+You must follow the output format strictly. Do NOT output any reasoning or <think>.
+
+Question:
+{query_text}
+
+[STRICT OUTPUT RULES]
+TaskType: {task_type}
+AnswerFormat: {answer_format}
+{strict_format_rules}
+[END STRICT OUTPUT RULES]

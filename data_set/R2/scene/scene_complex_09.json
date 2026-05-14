@@ -1,0 +1,912 @@
+{
+  "scene_id": "scene_complex_09",
+  "description": "Complex scene 09: G5 - Extreme reasoning (14 rooms)",
+  "world": {
+    "scene_name": "scene_complex_09",
+    "gradient": "G5",
+    "gradient_label": "Extreme reasoning",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "type": "Lab",
+        "x": 0,
+        "y": 12
+      },
+      {
+        "idx": 1,
+        "room_id": "R2",
+        "type": "Classroom",
+        "x": 4,
+        "y": 12
+      },
+      {
+        "idx": 2,
+        "room_id": "R3",
+        "type": "Corridor",
+        "x": 8,
+        "y": 12
+      },
+      {
+        "idx": 3,
+        "room_id": "R4",
+        "type": "Library",
+        "x": 12,
+        "y": 12
+      },
+      {
+        "idx": 4,
+        "room_id": "R5",
+        "type": "Bedroom",
+        "x": 12,
+        "y": 8
+      },
+      {
+        "idx": 5,
+        "room_id": "R6",
+        "type": "Kitchen",
+        "x": 8,
+        "y": 8
+      },
+      {
+        "idx": 6,
+        "room_id": "R7",
+        "type": "Reception",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "idx": 7,
+        "room_id": "R8",
+        "type": "Lab",
+        "x": 0,
+        "y": 8
+      },
+      {
+        "idx": 8,
+        "room_id": "R9",
+        "type": "Classroom",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "idx": 9,
+        "room_id": "R10",
+        "type": "Corridor",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "idx": 10,
+        "room_id": "R11",
+        "type": "Library",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "idx": 11,
+        "room_id": "R12",
+        "type": "Bedroom",
+        "x": 12,
+        "y": 4
+      },
+      {
+        "idx": 12,
+        "room_id": "R13",
+        "type": "Kitchen",
+        "x": 12,
+        "y": 0
+      },
+      {
+        "idx": 13,
+        "room_id": "R14",
+        "type": "Reception",
+        "x": 8,
+        "y": 0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "objects": {
+      "0": [
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Instruments",
+          "Violin"
+        ],
+        [
+          "Storage",
+          "FileCabinet"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "Security",
+          "Light"
+        ]
+      ],
+      "1": [
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Instruments",
+          "Flute"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Storage",
+          "Crate"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Instruments",
+          "Amp"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ]
+      ],
+      "2": [
+        [
+          "Instruments",
+          "Violin"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Instruments",
+          "Piano"
+        ],
+        [
+          "Instruments",
+          "Amp"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Storage",
+          "Crate"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ]
+      ],
+      "3": [
+        [
+          "Storage",
+          "Crate"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Storage",
+          "Safe"
+        ],
+        [
+          "Instruments",
+          "Drum"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Instruments",
+          "Piano"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ]
+      ],
+      "4": [
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Instruments",
+          "Drum"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ]
+      ],
+      "5": [
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Storage",
+          "Drawer"
+        ],
+        [
+          "Storage",
+          "FileCabinet"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Instruments",
+          "Stool"
+        ],
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Instruments",
+          "Piano"
+        ]
+      ],
+      "6": [
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Instruments",
+          "Violin"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Instruments",
+          "Stool"
+        ],
+        [
+          "Instruments",
+          "Amp"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "Instruments",
+          "Violin"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "IT",
+          "Monitor"
+        ],
+        [
+          "Instruments",
+          "Stool"
+        ]
+      ],
+      "7": [
+        [
+          "Instruments",
+          "Drum"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Instruments",
+          "Amp"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Storage",
+          "Safe"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ]
+      ],
+      "8": [
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Instruments",
+          "Flute"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Security",
+          "Gate"
+        ]
+      ],
+      "9": [
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Instruments",
+          "Flute"
+        ],
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Storage",
+          "Crate"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Storage",
+          "Drawer"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Instruments",
+          "Drum"
+        ],
+        [
+          "Storage",
+          "Safe"
+        ]
+      ],
+      "10": [
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Instruments",
+          "Flute"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "Storage",
+          "Rack"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Security",
+          "Gate"
+        ]
+      ],
+      "11": [
+        [
+          "Furniture",
+          "Desk"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Instruments",
+          "Piano"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Storage",
+          "Drawer"
+        ],
+        [
+          "Storage",
+          "Rack"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Instruments",
+          "Violin"
+        ]
+      ],
+      "12": [
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "Storage",
+          "Safe"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "Instruments",
+          "Violin"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Instruments",
+          "Flute"
+        ],
+        [
+          "Instruments",
+          "Amp"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ]
+      ],
+      "13": [
+        [
+          "Storage",
+          "Drawer"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "IT",
+          "Router"
+        ]
+      ]
+    },
+    "history": [
+      0,
+      1,
+      6,
+      5,
+      10,
+      13,
+      12,
+      13,
+      12,
+      13,
+      10
+    ],
+    "rules": [
+      "When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.",
+      "Do not repeat a room in the path unless necessary.",
+      "If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence."
+    ]
+  },
+  "variants": {
+    "flat_full": "You are in the scene 'scene_complex_09'.\nRooms and coordinates:\n- R1 (Lab) @ (0,12)\n  Objects: Storage:Box, Security:Lock, Digital:Mixer, Digital:Microphone, Digital:Phone, Instruments:Violin, Storage:FileCabinet, Security:BadgeReader, Digital:Projector, Digital:Phone, Security:Camera, Security:Light\n- R2 (Classroom) @ (4,12)\n  Objects: Digital:Phone, Furniture:Bench, Instruments:Flute, Digital:Projector, Digital:Kindle, Digital:Microphone, Storage:Crate, Furniture:Cabinet, Furniture:Sofa, Instruments:Amp, Digital:Speaker, Furniture:Desk\n- R3 (Corridor) @ (8,12)\n  Objects: Instruments:Violin, Furniture:Bench, Instruments:Piano, Instruments:Amp, IT:Printer, Digital:Phone, Storage:Crate, Storage:Locker, Digital:Projector, Furniture:Bench, IT:Scanner, Furniture:Bench\n- R4 (Library) @ (12,12)\n  Objects: Storage:Crate, Furniture:Sofa, Storage:Safe, Instruments:Drum, Digital:Microphone, Digital:Stylus, Furniture:Cabinet, Digital:Mixer, Instruments:Piano, Furniture:Sofa, Furniture:Bench, Digital:Mixer\n- R5 (Bedroom) @ (12,8)\n  Objects: Digital:Speaker, Instruments:Drum, Security:Lock, Security:Lock, Digital:Kindle, Security:Sensor, Security:Alarm, Security:BadgeReader, Digital:Speaker, IT:Scanner, Security:Lock, Storage:Locker\n- R6 (Kitchen) @ (8,8)\n  Objects: Furniture:Cabinet, IT:Tablet, Digital:Stylus, Furniture:Sofa, Storage:Drawer, Storage:FileCabinet, Furniture:Table, Instruments:Stool, IT:Router, Furniture:Bench, Furniture:Table, Instruments:Piano\n- R7 (Reception) @ (4,8)\n  Objects: Digital:Projector, Instruments:Violin, Furniture:Shelf, Furniture:Cabinet, Instruments:Stool, Instruments:Amp, IT:Tablet, Instruments:Violin, Storage:Locker, Digital:Kindle, IT:Monitor, Instruments:Stool\n- R8 (Lab) @ (0,8)\n  Objects: Instruments:Drum, Furniture:Shelf, Storage:Locker, Instruments:Amp, IT:Scanner, Furniture:Chair, IT:Printer, Storage:Safe, IT:Printer, Furniture:Table, Furniture:Chair, Digital:Phone\n- R9 (Classroom) @ (0,4)\n  Objects: Furniture:Sofa, Furniture:Bench, Storage:Locker, Security:Light, IT:Scanner, Instruments:Flute, Security:Sensor, Digital:Projector, IT:Router, Digital:Kindle, Storage:Box, Security:Gate\n- R10 (Corridor) @ (4,4)\n  Objects: IT:Printer, Instruments:Flute, Storage:Box, Storage:Crate, Security:Camera, IT:Printer, Storage:Drawer, Digital:Phone, Security:Light, Digital:Stylus, Instruments:Drum, Storage:Safe\n- R11 (Library) @ (8,4)\n  Objects: Furniture:Table, Digital:Microphone, Storage:Box, Security:Alarm, Furniture:Desk, Security:Lock, Instruments:Flute, Security:Camera, Storage:Rack, Security:Sensor, Security:BadgeReader, Security:Gate\n- R12 (Bedroom) @ (12,4)\n  Objects: Furniture:Desk, Digital:Stylus, Instruments:Piano, IT:Scanner, Storage:Drawer, Storage:Rack, Digital:Projector, Digital:Speaker, Security:Gate, Digital:Projector, Security:Alarm, Instruments:Violin\n- R13 (Kitchen) @ (12,0)\n  Objects: Digital:Projector, IT:Tablet, Storage:Safe, Security:Camera, Instruments:Violin, Security:Lock, Security:Light, Digital:Microphone, Instruments:Flute, Instruments:Amp, Digital:Stylus, Furniture:Table\n- R14 (Reception) @ (8,0)\n  Objects: Storage:Drawer, Digital:Projector, Furniture:Shelf, IT:Server, Security:Alarm, Furniture:Chair, Digital:Projector, Security:Alarm, Digital:Kindle, Furniture:Bench, Security:Sensor, IT:Router\nTopology edges: R1-R2, R1-R8, R2-R3, R2-R7, R3-R4, R4-R5, R5-R6, R5-R12, R6-R7, R6-R11, R7-R8, R7-R10, R8-R9, R10-R11, R11-R14, R12-R13, R13-R14.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R6(t4) -> R11(t5) -> R14(t6) -> R13(t7) -> R14(t8) -> R13(t9) -> R14(t10) -> R11(t11).\nRules/constraints:\n- When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.\n- Do not repeat a room in the path unless necessary.\n- If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence.",
+    "flat_topo_hist": "You are given a set of room IDs and how they connect (topology).\nRooms: R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14.\nTopology edges: R1-R2, R1-R8, R2-R3, R2-R7, R3-R4, R4-R5, R5-R6, R5-R12, R6-R7, R6-R11, R7-R8, R7-R10, R8-R9, R10-R11, R11-R14, R12-R13, R13-R14.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R6(t4) -> R11(t5) -> R14(t6) -> R13(t7) -> R14(t8) -> R13(t9) -> R14(t10) -> R11(t11).\nConstraint: When generating a path, output the shortest valid path unless the question specifies otherwise.",
+    "flat_geom_rule_hist": "You are given room coordinates. You must infer connectivity using the rules below.\nRooms and coordinates:\n- R1 @ (0,12)\n- R2 @ (4,12)\n- R3 @ (8,12)\n- R4 @ (12,12)\n- R5 @ (12,8)\n- R6 @ (8,8)\n- R7 @ (4,8)\n- R8 @ (0,8)\n- R9 @ (0,4)\n- R10 @ (4,4)\n- R11 @ (8,4)\n- R12 @ (12,4)\n- R13 @ (12,0)\n- R14 @ (8,0)\nRules:\n- Two rooms are connected by a door iff their Manhattan distance is exactly 4.\n- You may assume there are no blocked doors unless the text explicitly says so.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R6(t4) -> R11(t5) -> R14(t6) -> R13(t7) -> R14(t8) -> R13(t9) -> R14(t10) -> R11(t11).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat_sem_rule_hist": "You are given room semantics and room contents. Connectivity is defined by semantic rules below.\nRooms and semantics:\n- R1 is a 'Lab'. Objects: Storage:Box, Security:Lock, Digital:Mixer, Digital:Microphone, Digital:Phone, Instruments:Violin, Storage:FileCabinet, Security:BadgeReader, Digital:Projector, Digital:Phone, Security:Camera, Security:Light\n- R2 is a 'Classroom'. Objects: Digital:Phone, Furniture:Bench, Instruments:Flute, Digital:Projector, Digital:Kindle, Digital:Microphone, Storage:Crate, Furniture:Cabinet, Furniture:Sofa, Instruments:Amp, Digital:Speaker, Furniture:Desk\n- R3 is a 'Corridor'. Objects: Instruments:Violin, Furniture:Bench, Instruments:Piano, Instruments:Amp, IT:Printer, Digital:Phone, Storage:Crate, Storage:Locker, Digital:Projector, Furniture:Bench, IT:Scanner, Furniture:Bench\n- R4 is a 'Library'. Objects: Storage:Crate, Furniture:Sofa, Storage:Safe, Instruments:Drum, Digital:Microphone, Digital:Stylus, Furniture:Cabinet, Digital:Mixer, Instruments:Piano, Furniture:Sofa, Furniture:Bench, Digital:Mixer\n- R5 is a 'Bedroom'. Objects: Digital:Speaker, Instruments:Drum, Security:Lock, Security:Lock, Digital:Kindle, Security:Sensor, Security:Alarm, Security:BadgeReader, Digital:Speaker, IT:Scanner, Security:Lock, Storage:Locker\n- R6 is a 'Kitchen'. Objects: Furniture:Cabinet, IT:Tablet, Digital:Stylus, Furniture:Sofa, Storage:Drawer, Storage:FileCabinet, Furniture:Table, Instruments:Stool, IT:Router, Furniture:Bench, Furniture:Table, Instruments:Piano\n- R7 is a 'Reception'. Objects: Digital:Projector, Instruments:Violin, Furniture:Shelf, Furniture:Cabinet, Instruments:Stool, Instruments:Amp, IT:Tablet, Instruments:Violin, Storage:Locker, Digital:Kindle, IT:Monitor, Instruments:Stool\n- R8 is a 'Lab'. Objects: Instruments:Drum, Furniture:Shelf, Storage:Locker, Instruments:Amp, IT:Scanner, Furniture:Chair, IT:Printer, Storage:Safe, IT:Printer, Furniture:Table, Furniture:Chair, Digital:Phone\n- R9 is a 'Classroom'. Objects: Furniture:Sofa, Furniture:Bench, Storage:Locker, Security:Light, IT:Scanner, Instruments:Flute, Security:Sensor, Digital:Projector, IT:Router, Digital:Kindle, Storage:Box, Security:Gate\n- R10 is a 'Corridor'. Objects: IT:Printer, Instruments:Flute, Storage:Box, Storage:Crate, Security:Camera, IT:Printer, Storage:Drawer, Digital:Phone, Security:Light, Digital:Stylus, Instruments:Drum, Storage:Safe\n- R11 is a 'Library'. Objects: Furniture:Table, Digital:Microphone, Storage:Box, Security:Alarm, Furniture:Desk, Security:Lock, Instruments:Flute, Security:Camera, Storage:Rack, Security:Sensor, Security:BadgeReader, Security:Gate\n- R12 is a 'Bedroom'. Objects: Furniture:Desk, Digital:Stylus, Instruments:Piano, IT:Scanner, Storage:Drawer, Storage:Rack, Digital:Projector, Digital:Speaker, Security:Gate, Digital:Projector, Security:Alarm, Instruments:Violin\n- R13 is a 'Kitchen'. Objects: Digital:Projector, IT:Tablet, Storage:Safe, Security:Camera, Instruments:Violin, Security:Lock, Security:Light, Digital:Microphone, Instruments:Flute, Instruments:Amp, Digital:Stylus, Furniture:Table\n- R14 is a 'Reception'. Objects: Storage:Drawer, Digital:Projector, Furniture:Shelf, IT:Server, Security:Alarm, Furniture:Chair, Digital:Projector, Security:Alarm, Digital:Kindle, Furniture:Bench, Security:Sensor, IT:Router\nSemantic connectivity rules (room-chain):\n- The scene provides an ordered chain of rooms. Two rooms are connected iff they are adjacent in this chain.\n- Room chain: R1 -> R2 -> R3 -> R4 -> R5 -> R6 -> R7 -> R8 -> R9 -> R10 -> R11 -> R12 -> R13 -> R14\n- The chain is the ONLY source of connectivity (do not assume any other connections).\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R6(t4) -> R11(t5) -> R14(t6) -> R13(t7) -> R14(t8) -> R13(t9) -> R14(t10) -> R11(t11).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat": "You are in a art museum. You start at the Lab (R1), located at (0,12), which contains Box, Lock, Mixer, Microphone, Phone, Violin, FileCabinet, BadgeReader, Projector, Phone, Camera, and a Light. Moving East from the Lab (R1), you enter the Classroom (R2) at (4,12), which contains Phone, Bench, Flute, Projector, Kindle, Microphone, Crate, Cabinet, Sofa, Amp, Speaker, and a Desk. Moving East from the Classroom (R2), you enter the Corridor (R3) at (8,12), which contains Violin, Bench, Piano, Amp, Printer, Phone, Crate, Locker, Projector, Bench, Scanner, and a Bench. Moving East from the Corridor (R3), you enter the Library (R4) at (12,12), which contains Crate, Sofa, Safe, Drum, Microphone, Stylus, Cabinet, Mixer, Piano, Sofa, Bench, and a Mixer. Moving South from the Library (R4), you enter the Bedroom (R5) at (12,8), which contains Speaker, Drum, Lock, Lock, Kindle, Sensor, Alarm, BadgeReader, Speaker, Scanner, Lock, and a Locker. Moving West from the Bedroom (R5), you enter the Kitchen (R6) at (8,8), which contains Cabinet, Tablet, Stylus, Sofa, Drawer, FileCabinet, Table, Stool, Router, Bench, Table, and a Piano. Moving South from the Classroom (R2), you enter the Reception (R7) at (4,8), which contains Projector, Violin, Shelf, Cabinet, Stool, Amp, Tablet, Violin, Locker, Kindle, Monitor, and a Stool. Moving South from the Lab (R1), you enter the Lab (R8) at (0,8), which contains Drum, Shelf, Locker, Amp, Scanner, Chair, Printer, Safe, Printer, Table, Chair, and a Phone. Moving South from the Lab (R8), you enter the Classroom (R9) at (0,4), which contains Sofa, Bench, Locker, Light, Scanner, Flute, Sensor, Projector, Router, Kindle, Box, and a Gate. Moving South from the Reception (R7), you enter the Corridor (R10) at (4,4), which contains Printer, Flute, Box, Crate, Camera, Printer, Drawer, Phone, Light, Stylus, Drum, and a Safe. Moving South from the Kitchen (R6), you enter the Library (R11) at (8,4), which contains Table, Microphone, Box, Alarm, Desk, Lock, Flute, Camera, Rack, Sensor, BadgeReader, and a Gate. Moving South from the Bedroom (R5), you enter the Bedroom (R12) at (12,4), which contains Desk, Stylus, Piano, Scanner, Drawer, Rack, Projector, Speaker, Gate, Projector, Alarm, and a Violin. Moving South from the Bedroom (R12), you enter the Kitchen (R13) at (12,0), which contains Projector, Tablet, Safe, Camera, Violin, Lock, Light, Microphone, Flute, Amp, Stylus, and a Table. Moving South from the Library (R11), you enter the Reception (R14) at (8,0), which contains Drawer, Projector, Shelf, Server, Alarm, Chair, Projector, Alarm, Kindle, Bench, Sensor, and a Router. Interestingly, the Lab features a connection back to the Lab and the Classroom features a connection back to the Reception. At t1, a 'Master_Key' was in the Lab (R1). At t2, it was picked up and moved to the Classroom (R2). At t3, it was picked up and moved to the Reception (R7). At t4, it was picked up and moved to the Kitchen (R6). At t5, it was picked up and moved to the Library (R11). At t6, it was picked up and moved to the Reception (R14). At t7, it was picked up and moved to the Kitchen (R13). At t8, it was picked up and moved to the Reception (R14). At t9, it was picked up and moved to the Kitchen (R13). At t10, it was picked up and moved to the Reception (R14). At t11, it was picked up and moved to the Library (R11).",
+    "hier": "[SCENE: art museum]\n- [ROOM R1: Lab @ (0,12)]\n  - [Objects: Storage(Box, FileCabinet), Security(Lock, BadgeReader, Camera, Light), Digital(Mixer, Microphone, Phone, Projector, Phone), Instruments(Violin)]\n- [ROOM R2: Classroom @ (4,12)]\n  - [Objects: Digital(Phone, Projector, Kindle, Microphone, Speaker), Furniture(Bench, Cabinet, Sofa, Desk), Instruments(Flute, Amp), Storage(Crate)]\n- [ROOM R3: Corridor @ (8,12)]\n  - [Objects: Instruments(Violin, Piano, Amp), Furniture(Bench, Bench, Bench), IT(Printer, Scanner), Digital(Phone, Projector), Storage(Crate, Locker)]\n- [ROOM R4: Library @ (12,12)]\n  - [Objects: Storage(Crate, Safe), Furniture(Sofa, Cabinet, Sofa, Bench), Instruments(Drum, Piano), Digital(Microphone, Stylus, Mixer, Mixer)]\n- [ROOM R5: Bedroom @ (12,8)]\n  - [Objects: Digital(Speaker, Kindle, Speaker), Instruments(Drum), Security(Lock, Lock, Sensor, Alarm, BadgeReader, Lock), IT(Scanner), Storage(Locker)]\n- [ROOM R6: Kitchen @ (8,8)]\n  - [Objects: Furniture(Cabinet, Sofa, Table, Bench, Table), IT(Tablet, Router), Digital(Stylus), Storage(Drawer, FileCabinet), Instruments(Stool, Piano)]\n- [ROOM R7: Reception @ (4,8)]\n  - [Objects: Digital(Projector, Kindle), Instruments(Violin, Stool, Amp, Violin, Stool), Furniture(Shelf, Cabinet), IT(Tablet, Monitor), Storage(Locker)]\n- [ROOM R8: Lab @ (0,8)]\n  - [Objects: Instruments(Drum, Amp), Furniture(Shelf, Chair, Table, Chair), Storage(Locker, Safe), IT(Scanner, Printer, Printer), Digital(Phone)]\n- [ROOM R9: Classroom @ (0,4)]\n  - [Objects: Furniture(Sofa, Bench), Storage(Locker, Box), Security(Light, Sensor, Gate), IT(Scanner, Router), Instruments(Flute), Digital(Projector, Kindle)]\n- [ROOM R10: Corridor @ (4,4)]\n  - [Objects: IT(Printer, Printer), Instruments(Flute, Drum), Storage(Box, Crate, Drawer, Safe), Security(Camera, Light), Digital(Phone, Stylus)]\n- [ROOM R11: Library @ (8,4)]\n  - [Objects: Furniture(Table, Desk), Digital(Microphone), Storage(Box, Rack), Security(Alarm, Lock, Camera, Sensor, BadgeReader, Gate), Instruments(Flute)]\n- [ROOM R12: Bedroom @ (12,4)]\n  - [Objects: Furniture(Desk), Digital(Stylus, Projector, Speaker, Projector), Instruments(Piano, Violin), IT(Scanner), Storage(Drawer, Rack), Security(Gate, Alarm)]\n- [ROOM R13: Kitchen @ (12,0)]\n  - [Objects: Digital(Projector, Microphone, Stylus), IT(Tablet), Storage(Safe), Security(Camera, Lock, Light), Instruments(Violin, Flute, Amp), Furniture(Table)]\n- [ROOM R14: Reception @ (8,0)]\n  - [Objects: Storage(Drawer), Digital(Projector, Projector, Kindle), Furniture(Shelf, Chair, Bench), IT(Server, Router), Security(Alarm, Alarm, Sensor)]\n\n[TOPOLOGY] R1-R2, R1-R8, R2-R3, R2-R7, R3-R4, R4-R5, R5-R6, R5-R12, R6-R7, R6-R11, R7-R8, R7-R10, R8-R9, R10-R11, R11-R14, R12-R13, R13-R14\n[HISTORY] Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R6(t4) -> R11(t5) -> R14(t6) -> R13(t7) -> R14(t8) -> R13(t9) -> R14(t10) -> R11(t11)",
+    "hier_50": "[HIERARCHY]\nScene(09) -> R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14\nR1(0,12): {Sto:Box, Sec:Loc, Dig:Mix, Dig:Mic}\nR2(4,12): {Dig:Pho, Fur:Ben, Ins:Flu, Dig:Pro}\nR3(8,12): {Ins:Vio, Fur:Ben, Ins:Pia, Ins:Amp}\nR4(12,12): {Sto:Cra, Fur:Sof, Sto:Saf, Ins:Dru}\nR5(12,8): {Dig:Spe, Ins:Dru, Sec:Loc, Sec:Loc}\nR6(8,8): {Fur:Cab, IT:Tab, Dig:Sty, Fur:Sof}\nR7(4,8): {Dig:Pro, Ins:Vio, Fur:She, Fur:Cab}\nR8(0,8): {Ins:Dru, Fur:She, Sto:Loc, Ins:Amp}\nR9(0,4): {Fur:Sof, Fur:Ben, Sto:Loc, Sec:Lig}\nR10(4,4): {IT:Pri, Ins:Flu, Sto:Box, Sto:Cra}\nR11(8,4): {Fur:Tab, Dig:Mic, Sto:Box, Sec:Ala}\nR12(12,4): {Fur:Des, Dig:Sty, Ins:Pia, IT:Sca}\nR13(12,0): {Dig:Pro, IT:Tab, Sto:Saf, Sec:Cam}\nR14(8,0): {Sto:Dra, Dig:Pro, Fur:She, IT:Ser}\nEdges: R1-R2,R1-R8,R2-R3,R2-R7,R3-R4,R4-R5,R5-R6,R5-R12,R6-R7,R6-R11,R7-R8,R7-R10,R8-R9,R10-R11,R11-R14,R12-R13,R13-R14\nPath: Key@R1>R2>R7>R6>R11>R14>R13>R14>R13>R14>R11",
+    "hier_25": "09[R1(0,12):{Sto, Sec, Dig}; R2(4,12):{Dig, Fur, Ins}; R3(8,12):{Ins, Fur, Ins}; R4(12,12):{Sto, Fur, Sto}; R5(12,8):{Dig, Ins, Sec}; R6(8,8):{Fur, IT, Dig}; R7(4,8):{Dig, Ins, Fur}; R8(0,8):{Ins, Fur, Sto}; R9(0,4):{Fur, Fur, Sto}; R10(4,4):{IT, Ins, Sto}; R11(8,4):{Fur, Dig, Sto}; R12(12,4):{Fur, Dig, Ins}; R13(12,0):{Dig, IT, Sto}; R14(8,0):{Sto, Dig, Fur}]. Edges:1-2,1-8,2-3,2-7,3-4,4-5,5-6,5-12,6-7,6-11,7-8,7-10,8-9,10-11,11-14,12-13,13-14. Key:1>2>7>6>11>14>13>14>13>14>11.",
+    "clustered": "[SCENE: art museum]\n- [ZONE A: R1, R8, R9, R2, R7, R10, R3]\n  - [R1, R8, R9, R2, R7, R10, R3 Objects]: {Security, IT, Storage, Digital, Instruments, Furniture}\n- [ZONE B: R6, R11, R14, R4, R5, R12, R13]\n  - [R6, R11, R14, R4, R5, R12, R13 Objects]: {Security, IT, Storage, Furniture, Instruments, Digital}\n\n[GEOMETRY] A_Center: (2.9, 8.6) | B_Center: (10.3, 5.1)\n[CONNECTIVITY] Zone_A <-> Zone B via R3-R4. Zone_B <-> Zone A via R6-R7. Loop in Zone_A. Loop in Zone_B\n[HISTORY] Master_Key: Zone_A(R1) -> Zone_B(R11) -> Zone_B(R11)",
+    "clustered_50": "[CLUSTERS]\nA_Zone(R1,R8,R9,R2,R7,R10,R3) @(3,9): {Security/IT}\nB_Zone(R6,R11,R14,R4,R5,R12,R13) @(10,5): {Security/IT}\n[LINKS] Zone_A <-> Zone B via R3-R4. Zone_B <-> Zone A via R6-R7. Loop in Zone_A. Loop in Zone_B\n[TRACE] Key: A(R1)->B(R11).",
+    "clustered_25": "G1(3,9):1,8,9,2,7,10,3. G2(10,5):6,11,14,4,5,12,13. Links:G1-G2(3-4),G2-G1(6-7),G1-G2(10-11). Key:A>B."
+  }
+}

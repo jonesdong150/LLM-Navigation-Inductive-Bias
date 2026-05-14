@@ -1,0 +1,990 @@
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 56.00%   | 0.00%    | 50    
+clustered_50              | 58.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 72.00%   | 0.00%    | 50    
+hier_25                   | 54.00%   | 0.00%    | 50    
+hier_50                   | 64.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 58.00%   | 0.00%    | 50    
+clustered_25              | 52.00%   | 0.00%    | 50    
+clustered_50              | 50.00%   | 0.00%    | 50    
+flat                      | 68.00%   | 0.00%    | 50    
+hier                      | 70.00%   | 0.00%    | 50    
+hier_25                   | 52.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 60.00%   | 0.00%    | 50    
+clustered_25              | 52.00%   | 0.00%    | 50    
+clustered_50              | 54.00%   | 0.00%    | 50    
+flat                      | 68.00%   | 0.00%    | 50    
+hier                      | 66.00%   | 0.00%    | 50    
+hier_25                   | 52.00%   | 0.00%    | 50    
+hier_50                   | 66.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 66.00%   | 0.00%    | 50    
+clustered_25              | 54.00%   | 0.00%    | 50    
+clustered_50              | 54.00%   | 0.00%    | 50    
+flat                      | 74.00%   | 0.00%    | 50    
+hier                      | 66.00%   | 0.00%    | 50    
+hier_25                   | 54.00%   | 0.00%    | 50    
+hier_50                   | 66.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 46.00%   | 0.00%    | 50    
+clustered_50              | 48.00%   | 0.00%    | 50    
+flat                      | 62.00%   | 0.00%    | 50    
+hier                      | 66.00%   | 0.00%    | 50    
+hier_25                   | 48.00%   | 0.00%    | 50    
+hier_50                   | 52.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 54.00%   | 0.00%    | 50    
+clustered_25              | 54.00%   | 0.00%    | 50    
+clustered_50              | 60.00%   | 0.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 66.00%   | 0.00%    | 50    
+hier_25                   | 52.00%   | 0.00%    | 50    
+hier_50                   | 56.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 56.00%   | 0.00%    | 50    
+clustered_50              | 58.00%   | 0.00%    | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 62.00%   | 0.00%    | 50    
+hier_25                   | 52.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 62.00%   | 0.00%    | 50    
+clustered_25              | 60.00%   | 0.00%    | 50    
+clustered_50              | 62.00%   | 0.00%    | 50    
+flat                      | 64.00%   | 0.00%    | 50    
+hier                      | 68.00%   | 0.00%    | 50    
+hier_25                   | 54.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 62.00%   | 0.00%    | 50    
+clustered_25              | 56.00%   | 0.00%    | 50    
+clustered_50              | 56.00%   | 0.00%    | 50    
+flat                      | 68.00%   | 0.00%    | 50    
+hier                      | 64.00%   | 0.00%    | 50    
+hier_25                   | 56.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-0.6B | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 68.00%   | 0.00%    | 50    
+clustered_25              | 58.00%   | 0.00%    | 50    
+clustered_50              | 62.00%   | 0.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 70.00%   | 0.00%    | 50    
+hier_25                   | 60.00%   | 0.00%    | 50    
+hier_50                   | 64.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 34.00%   | 0.00%    | 50    
+clustered_25              | 22.00%   | 14.00%   | 50    
+clustered_50              | 34.00%   | 8.00%    | 50    
+flat                      | 46.00%   | 0.00%    | 50    
+hier                      | 48.00%   | 4.00%    | 50    
+hier_25                   | 62.00%   | 14.00%   | 50    
+hier_50                   | 48.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 48.00%   | 0.00%    | 50    
+clustered_25              | 26.00%   | 6.00%    | 50    
+clustered_50              | 36.00%   | 8.00%    | 50    
+flat                      | 50.00%   | 0.00%    | 50    
+hier                      | 60.00%   | 0.00%    | 50    
+hier_25                   | 56.00%   | 8.00%    | 50    
+hier_50                   | 50.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 28.00%   | 0.00%    | 50    
+clustered_25              | 18.00%   | 22.00%   | 50    
+clustered_50              | 18.00%   | 2.00%    | 50    
+flat                      | 40.00%   | 0.00%    | 50    
+hier                      | 46.00%   | 0.00%    | 50    
+hier_25                   | 24.00%   | 26.00%   | 50    
+hier_50                   | 44.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 34.00%   | 0.00%    | 50    
+clustered_25              | 26.00%   | 14.00%   | 50    
+clustered_50              | 30.00%   | 6.00%    | 50    
+flat                      | 50.00%   | 0.00%    | 50    
+hier                      | 48.00%   | 0.00%    | 50    
+hier_25                   | 12.00%   | 30.00%   | 50    
+hier_50                   | 58.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 0.00%    | 50    
+clustered_25              | 18.00%   | 32.00%   | 50    
+clustered_50              | 34.00%   | 4.00%    | 50    
+flat                      | 46.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 2.00%    | 50    
+hier_25                   | 32.00%   | 8.00%    | 50    
+hier_50                   | 44.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 0.00%    | 50    
+clustered_25              | 24.00%   | 26.00%   | 50    
+clustered_50              | 48.00%   | 4.00%    | 50    
+flat                      | 48.00%   | 0.00%    | 50    
+hier                      | 52.00%   | 2.00%    | 50    
+hier_25                   | 26.00%   | 6.00%    | 50    
+hier_50                   | 48.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 24.00%   | 0.00%    | 50    
+clustered_25              | 28.00%   | 0.00%    | 50    
+clustered_50              | 30.00%   | 12.00%   | 50    
+flat                      | 50.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 2.00%    | 50    
+hier_25                   | 18.00%   | 10.00%   | 50    
+hier_50                   | 34.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 24.00%   | 0.00%    | 50    
+clustered_25              | 28.00%   | 2.00%    | 50    
+clustered_50              | 38.00%   | 10.00%   | 50    
+flat                      | 44.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 2.00%    | 50    
+hier_25                   | 34.00%   | 10.00%   | 50    
+hier_50                   | 38.00%   | 4.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 16.00%   | 2.00%    | 50    
+clustered_25              | 14.00%   | 14.00%   | 50    
+clustered_50              | 22.00%   | 16.00%   | 50    
+flat                      | 38.00%   | 0.00%    | 50    
+hier                      | 44.00%   | 2.00%    | 50    
+hier_25                   | 18.00%   | 20.00%   | 50    
+hier_50                   | 34.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-1.7B | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 0.00%    | 50    
+clustered_25              | 22.00%   | 10.00%   | 50    
+clustered_50              | 30.00%   | 8.00%    | 50    
+flat                      | 46.00%   | 0.00%    | 50    
+hier                      | 42.00%   | 2.00%    | 50    
+hier_25                   | 14.00%   | 14.00%   | 50    
+hier_50                   | 44.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 58.00%   | 0.00%    | 50    
+clustered_25              | 24.00%   | 0.00%    | 50    
+clustered_50              | 38.00%   | 0.00%    | 50    
+flat                      | 68.00%   | 0.00%    | 50    
+hier                      | 72.00%   | 0.00%    | 50    
+hier_25                   | 50.00%   | 0.00%    | 50    
+hier_50                   | 52.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 58.00%   | 0.00%    | 50    
+clustered_25              | 32.00%   | 0.00%    | 50    
+clustered_50              | 36.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 70.00%   | 0.00%    | 50    
+hier_25                   | 56.00%   | 0.00%    | 50    
+hier_50                   | 56.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 12.00%   | 0.00%    | 50    
+clustered_50              | 22.00%   | 0.00%    | 50    
+flat                      | 68.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 0.00%    | 50    
+hier_25                   | 20.00%   | 0.00%    | 50    
+hier_50                   | 34.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 42.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 22.00%   | 0.00%    | 50    
+flat                      | 62.00%   | 0.00%    | 50    
+hier                      | 46.00%   | 0.00%    | 50    
+hier_25                   | 22.00%   | 0.00%    | 50    
+hier_50                   | 36.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 36.00%   | 0.00%    | 50    
+clustered_25              | 24.00%   | 0.00%    | 50    
+clustered_50              | 26.00%   | 0.00%    | 50    
+flat                      | 68.00%   | 0.00%    | 50    
+hier                      | 56.00%   | 0.00%    | 50    
+hier_25                   | 32.00%   | 0.00%    | 50    
+hier_50                   | 42.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 32.00%   | 0.00%    | 50    
+clustered_25              | 28.00%   | 0.00%    | 50    
+clustered_50              | 26.00%   | 0.00%    | 50    
+flat                      | 64.00%   | 0.00%    | 50    
+hier                      | 54.00%   | 0.00%    | 50    
+hier_25                   | 40.00%   | 0.00%    | 50    
+hier_50                   | 50.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 0.00%    | 50    
+clustered_25              | 14.00%   | 0.00%    | 50    
+clustered_50              | 16.00%   | 0.00%    | 50    
+flat                      | 52.00%   | 0.00%    | 50    
+hier                      | 44.00%   | 0.00%    | 50    
+hier_25                   | 16.00%   | 0.00%    | 50    
+hier_50                   | 34.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 28.00%   | 0.00%    | 50    
+clustered_25              | 14.00%   | 0.00%    | 50    
+clustered_50              | 36.00%   | 0.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 0.00%    | 50    
+hier_25                   | 22.00%   | 0.00%    | 50    
+hier_50                   | 34.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 0.00%    | 50    
+clustered_25              | 16.00%   | 2.00%    | 50    
+clustered_50              | 24.00%   | 0.00%    | 50    
+flat                      | 52.00%   | 0.00%    | 50    
+hier                      | 38.00%   | 0.00%    | 50    
+hier_25                   | 28.00%   | 0.00%    | 50    
+hier_50                   | 26.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-4B | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 42.00%   | 0.00%    | 50    
+clustered_25              | 22.00%   | 0.00%    | 50    
+clustered_50              | 26.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 46.00%   | 0.00%    | 50    
+hier_25                   | 18.00%   | 0.00%    | 50    
+hier_50                   | 26.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 68.00%   | 0.00%    | 50    
+clustered_25              | 52.00%   | 0.00%    | 50    
+clustered_50              | 74.00%   | 0.00%    | 50    
+flat                      | 88.00%   | 0.00%    | 50    
+hier                      | 94.00%   | 0.00%    | 50    
+hier_25                   | 92.00%   | 0.00%    | 50    
+hier_50                   | 90.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 70.00%   | 0.00%    | 50    
+clustered_25              | 52.00%   | 0.00%    | 50    
+clustered_50              | 76.00%   | 0.00%    | 50    
+flat                      | 88.00%   | 0.00%    | 50    
+hier                      | 90.00%   | 0.00%    | 50    
+hier_25                   | 88.00%   | 0.00%    | 50    
+hier_50                   | 86.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 0.00%    | 50    
+clustered_25              | 26.00%   | 0.00%    | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 92.00%   | 0.00%    | 50    
+hier                      | 90.00%   | 0.00%    | 50    
+hier_25                   | 64.00%   | 0.00%    | 50    
+hier_50                   | 88.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 40.00%   | 0.00%    | 50    
+clustered_25              | 34.00%   | 0.00%    | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 92.00%   | 0.00%    | 50    
+hier                      | 90.00%   | 0.00%    | 50    
+hier_25                   | 66.00%   | 0.00%    | 50    
+hier_50                   | 88.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 60.00%   | 0.00%    | 50    
+clustered_25              | 48.00%   | 0.00%    | 50    
+clustered_50              | 56.00%   | 0.00%    | 50    
+flat                      | 88.00%   | 0.00%    | 50    
+hier                      | 90.00%   | 0.00%    | 50    
+hier_25                   | 68.00%   | 0.00%    | 50    
+hier_50                   | 86.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 54.00%   | 0.00%    | 50    
+clustered_25              | 34.00%   | 0.00%    | 50    
+clustered_50              | 52.00%   | 0.00%    | 50    
+flat                      | 84.00%   | 0.00%    | 50    
+hier                      | 80.00%   | 0.00%    | 50    
+hier_25                   | 60.00%   | 0.00%    | 50    
+hier_50                   | 72.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 0.00%    | 50    
+clustered_25              | 28.00%   | 0.00%    | 50    
+clustered_50              | 50.00%   | 0.00%    | 50    
+flat                      | 92.00%   | 0.00%    | 50    
+hier                      | 84.00%   | 0.00%    | 50    
+hier_25                   | 56.00%   | 0.00%    | 50    
+hier_50                   | 82.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 42.00%   | 0.00%    | 50    
+clustered_25              | 34.00%   | 0.00%    | 50    
+clustered_50              | 52.00%   | 0.00%    | 50    
+flat                      | 88.00%   | 0.00%    | 50    
+hier                      | 82.00%   | 0.00%    | 50    
+hier_25                   | 60.00%   | 0.00%    | 50    
+hier_50                   | 76.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 30.00%   | 0.00%    | 50    
+clustered_25              | 18.00%   | 0.00%    | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 90.00%   | 0.00%    | 50    
+hier                      | 84.00%   | 0.00%    | 50    
+hier_25                   | 68.00%   | 0.00%    | 50    
+hier_50                   | 80.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gpt-5.2 | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 48.00%   | 0.00%    | 50    
+clustered_25              | 24.00%   | 0.00%    | 50    
+clustered_50              | 56.00%   | 0.00%    | 50    
+flat                      | 86.00%   | 0.00%    | 50    
+hier                      | 78.00%   | 0.00%    | 50    
+hier_25                   | 66.00%   | 0.00%    | 50    
+hier_50                   | 70.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 54.00%   | 0.00%    | 50    
+clustered_25              | 34.00%   | 0.00%    | 50    
+clustered_50              | 42.00%   | 0.00%    | 50    
+flat                      | 80.00%   | 0.00%    | 50    
+hier                      | 76.00%   | 0.00%    | 50    
+hier_25                   | 58.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 40.00%   | 0.00%    | 50    
+clustered_50              | 44.00%   | 0.00%    | 50    
+flat                      | 74.00%   | 0.00%    | 50    
+hier                      | 80.00%   | 0.00%    | 50    
+hier_25                   | 56.00%   | 0.00%    | 50    
+hier_50                   | 68.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 50.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 32.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 66.00%   | 0.00%    | 50    
+hier_25                   | 24.00%   | 0.00%    | 50    
+hier_50                   | 56.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 0.00%    | 50    
+clustered_25              | 16.00%   | 0.00%    | 50    
+clustered_50              | 24.00%   | 0.00%    | 50    
+flat                      | 64.00%   | 0.00%    | 50    
+hier                      | 76.00%   | 0.00%    | 50    
+hier_25                   | 24.00%   | 0.00%    | 50    
+hier_50                   | 52.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 48.00%   | 0.00%    | 50    
+clustered_25              | 34.00%   | 0.00%    | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 68.00%   | 0.00%    | 50    
+hier_25                   | 38.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 44.00%   | 0.00%    | 50    
+clustered_25              | 16.00%   | 0.00%    | 50    
+clustered_50              | 38.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 60.00%   | 0.00%    | 50    
+hier_25                   | 32.00%   | 0.00%    | 50    
+hier_50                   | 50.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 0.00%    | 50    
+clustered_25              | 18.00%   | 0.00%    | 50    
+clustered_50              | 36.00%   | 0.00%    | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 60.00%   | 0.00%    | 50    
+hier_25                   | 28.00%   | 0.00%    | 50    
+hier_50                   | 54.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 28.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 30.00%   | 0.00%    | 50    
+flat                      | 64.00%   | 0.00%    | 50    
+hier                      | 62.00%   | 0.00%    | 50    
+hier_25                   | 20.00%   | 0.00%    | 50    
+hier_50                   | 54.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 34.00%   | 0.00%    | 50    
+clustered_25              | 12.00%   | 0.00%    | 50    
+clustered_50              | 26.00%   | 0.00%    | 50    
+flat                      | 62.00%   | 0.00%    | 50    
+hier                      | 46.00%   | 0.00%    | 50    
+hier_25                   | 24.00%   | 0.00%    | 50    
+hier_50                   | 38.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-14b | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 50.00%   | 0.00%    | 50    
+clustered_25              | 16.00%   | 0.00%    | 50    
+clustered_50              | 24.00%   | 0.00%    | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 0.00%    | 50    
+hier_25                   | 16.00%   | 0.00%    | 50    
+hier_50                   | 36.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 66.00%   | 0.00%    | 50    
+clustered_25              | 46.00%   | 0.00%    | 50    
+clustered_50              | 60.00%   | 0.00%    | 50    
+flat                      | 80.00%   | 0.00%    | 50    
+hier                      | 88.00%   | 0.00%    | 50    
+hier_25                   | 72.00%   | 0.00%    | 50    
+hier_50                   | 74.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 44.00%   | 0.00%    | 50    
+clustered_50              | 58.00%   | 0.00%    | 50    
+flat                      | 80.00%   | 0.00%    | 50    
+hier                      | 76.00%   | 0.00%    | 50    
+hier_25                   | 74.00%   | 0.00%    | 50    
+hier_50                   | 80.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 52.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 38.00%   | 0.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 66.00%   | 0.00%    | 50    
+hier_25                   | 34.00%   | 0.00%    | 50    
+hier_50                   | 68.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 52.00%   | 0.00%    | 50    
+clustered_25              | 26.00%   | 0.00%    | 50    
+clustered_50              | 38.00%   | 0.00%    | 50    
+flat                      | 76.00%   | 0.00%    | 50    
+hier                      | 64.00%   | 0.00%    | 50    
+hier_25                   | 38.00%   | 0.00%    | 50    
+hier_50                   | 62.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 54.00%   | 0.00%    | 50    
+clustered_25              | 36.00%   | 0.00%    | 50    
+clustered_50              | 56.00%   | 0.00%    | 50    
+flat                      | 84.00%   | 0.00%    | 50    
+hier                      | 76.00%   | 0.00%    | 50    
+hier_25                   | 48.00%   | 0.00%    | 50    
+hier_50                   | 68.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 48.00%   | 0.00%    | 50    
+clustered_25              | 28.00%   | 0.00%    | 50    
+clustered_50              | 56.00%   | 0.00%    | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 74.00%   | 0.00%    | 50    
+hier_25                   | 42.00%   | 0.00%    | 50    
+hier_50                   | 58.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 48.00%   | 0.00%    | 50    
+clustered_25              | 30.00%   | 0.00%    | 50    
+clustered_50              | 46.00%   | 0.00%    | 50    
+flat                      | 78.00%   | 0.00%    | 50    
+hier                      | 62.00%   | 0.00%    | 50    
+hier_25                   | 42.00%   | 0.00%    | 50    
+hier_50                   | 52.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 40.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 44.00%   | 0.00%    | 50    
+flat                      | 78.00%   | 0.00%    | 50    
+hier                      | 76.00%   | 0.00%    | 50    
+hier_25                   | 44.00%   | 0.00%    | 50    
+hier_50                   | 54.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 44.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 42.00%   | 0.00%    | 50    
+flat                      | 76.00%   | 0.00%    | 50    
+hier                      | 76.00%   | 0.00%    | 50    
+hier_25                   | 26.00%   | 0.00%    | 50    
+hier_50                   | 60.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Qwen3-32b | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 56.00%   | 0.00%    | 50    
+clustered_25              | 20.00%   | 0.00%    | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 72.00%   | 0.00%    | 50    
+hier_25                   | 26.00%   | 0.00%    | 50    
+hier_50                   | 48.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 48.00%   | 0.00%    | 50    
+clustered_25              | 28.00%   | 8.00%    | 50    
+clustered_50              | 42.00%   | 0.00%    | 50    
+flat                      | 76.00%   | 0.00%    | 50    
+hier                      | 84.00%   | 0.00%    | 50    
+hier_25                   | 70.00%   | 12.00%   | 50    
+hier_50                   | 76.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 54.00%   | 0.00%    | 50    
+clustered_25              | 32.00%   | 8.00%    | 50    
+clustered_50              | 44.00%   | 0.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 82.00%   | 0.00%    | 50    
+hier_25                   | 70.00%   | 12.00%   | 50    
+hier_50                   | 76.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 0.00%    | 50    
+clustered_25              | 18.00%   | 2.00%    | 50    
+clustered_50              | 34.00%   | 0.00%    | 50    
+flat                      | 78.00%   | 0.00%    | 50    
+hier                      | 82.00%   | 0.00%    | 50    
+hier_25                   | 56.00%   | 10.00%   | 50    
+hier_50                   | 58.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 30.00%   | 0.00%    | 50    
+clustered_25              | 14.00%   | 6.00%    | 50    
+clustered_50              | 26.00%   | 0.00%    | 50    
+flat                      | 80.00%   | 0.00%    | 50    
+hier                      | 78.00%   | 0.00%    | 50    
+hier_25                   | 46.00%   | 28.00%   | 50    
+hier_50                   | 74.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 52.00%   | 0.00%    | 50    
+clustered_25              | 14.00%   | 10.00%   | 50    
+clustered_50              | 38.00%   | 0.00%    | 50    
+flat                      | 82.00%   | 0.00%    | 50    
+hier                      | 84.00%   | 0.00%    | 50    
+hier_25                   | 48.00%   | 16.00%   | 50    
+hier_50                   | 74.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 36.00%   | 2.00%    | 50    
+clustered_25              | 10.00%   | 12.00%   | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 74.00%   | 0.00%    | 50    
+hier_25                   | 46.00%   | 20.00%   | 50    
+hier_50                   | 50.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 46.00%   | 0.00%    | 50    
+clustered_25              | 14.00%   | 20.00%   | 50    
+clustered_50              | 42.00%   | 0.00%    | 50    
+flat                      | 80.00%   | 0.00%    | 50    
+hier                      | 86.00%   | 0.00%    | 50    
+hier_25                   | 48.00%   | 24.00%   | 50    
+hier_50                   | 58.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 4.00%    | 50    
+clustered_25              | 4.00%    | 22.00%   | 50    
+clustered_50              | 44.00%   | 0.00%    | 50    
+flat                      | 74.00%   | 0.00%    | 50    
+hier                      | 78.00%   | 0.00%    | 50    
+hier_25                   | 40.00%   | 24.00%   | 50    
+hier_50                   | 66.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 34.00%   | 0.00%    | 50    
+clustered_25              | 10.00%   | 18.00%   | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 80.00%   | 0.00%    | 50    
+hier                      | 82.00%   | 0.00%    | 50    
+hier_25                   | 36.00%   | 14.00%   | 50    
+hier_50                   | 66.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: gemini-2.5-flash-lite | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 50.00%   | 2.00%    | 50    
+clustered_25              | 14.00%   | 22.00%   | 50    
+clustered_50              | 40.00%   | 0.00%    | 50    
+flat                      | 84.00%   | 2.00%    | 50    
+hier                      | 70.00%   | 0.00%    | 50    
+hier_25                   | 44.00%   | 6.00%    | 50    
+hier_50                   | 70.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 24.00%   | 38.00%   | 50    
+clustered_25              | 24.00%   | 60.00%   | 50    
+clustered_50              | 30.00%   | 38.00%   | 50    
+flat                      | 36.00%   | 18.00%   | 50    
+hier                      | 26.00%   | 34.00%   | 50    
+hier_25                   | 22.00%   | 64.00%   | 50    
+hier_50                   | 30.00%   | 50.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 28.00%   | 40.00%   | 50    
+clustered_25              | 20.00%   | 64.00%   | 50    
+clustered_50              | 34.00%   | 44.00%   | 50    
+flat                      | 44.00%   | 10.00%   | 50    
+hier                      | 28.00%   | 40.00%   | 50    
+hier_25                   | 16.00%   | 66.00%   | 50    
+hier_50                   | 40.00%   | 42.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 16.00%   | 46.00%   | 50    
+clustered_25              | 30.00%   | 62.00%   | 50    
+clustered_50              | 36.00%   | 50.00%   | 50    
+flat                      | 38.00%   | 18.00%   | 50    
+hier                      | 22.00%   | 34.00%   | 50    
+hier_25                   | 26.00%   | 68.00%   | 50    
+hier_50                   | 28.00%   | 44.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 20.00%   | 42.00%   | 50    
+clustered_25              | 26.00%   | 32.00%   | 50    
+clustered_50              | 26.00%   | 54.00%   | 50    
+flat                      | 48.00%   | 10.00%   | 50    
+hier                      | 26.00%   | 36.00%   | 50    
+hier_25                   | 18.00%   | 70.00%   | 50    
+hier_50                   | 34.00%   | 50.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 20.00%   | 28.00%   | 50    
+clustered_25              | 16.00%   | 76.00%   | 50    
+clustered_50              | 36.00%   | 44.00%   | 50    
+flat                      | 40.00%   | 4.00%    | 50    
+hier                      | 22.00%   | 34.00%   | 50    
+hier_25                   | 28.00%   | 66.00%   | 50    
+hier_50                   | 22.00%   | 34.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 16.00%   | 30.00%   | 50    
+clustered_25              | 26.00%   | 68.00%   | 50    
+clustered_50              | 36.00%   | 46.00%   | 50    
+flat                      | 48.00%   | 8.00%    | 50    
+hier                      | 26.00%   | 34.00%   | 50    
+hier_25                   | 18.00%   | 66.00%   | 50    
+hier_50                   | 32.00%   | 34.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 18.00%   | 42.00%   | 50    
+clustered_25              | 24.00%   | 70.00%   | 50    
+clustered_50              | 26.00%   | 48.00%   | 50    
+flat                      | 46.00%   | 0.00%    | 50    
+hier                      | 24.00%   | 6.00%    | 50    
+hier_25                   | 14.00%   | 72.00%   | 50    
+hier_50                   | 16.00%   | 34.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 18.00%   | 50.00%   | 50    
+clustered_25              | 26.00%   | 72.00%   | 50    
+clustered_50              | 26.00%   | 58.00%   | 50    
+flat                      | 42.00%   | 6.00%    | 50    
+hier                      | 20.00%   | 46.00%   | 50    
+hier_25                   | 28.00%   | 64.00%   | 50    
+hier_50                   | 30.00%   | 46.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 20.00%   | 44.00%   | 50    
+clustered_25              | 22.00%   | 72.00%   | 50    
+clustered_50              | 12.00%   | 68.00%   | 50    
+flat                      | 38.00%   | 0.00%    | 50    
+hier                      | 22.00%   | 22.00%   | 50    
+hier_25                   | 30.00%   | 68.00%   | 50    
+hier_50                   | 20.00%   | 34.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-1B | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 16.00%   | 46.00%   | 50    
+clustered_25              | 18.00%   | 68.00%   | 50    
+clustered_50              | 28.00%   | 52.00%   | 50    
+flat                      | 42.00%   | 0.00%    | 50    
+hier                      | 10.00%   | 26.00%   | 50    
+hier_25                   | 26.00%   | 62.00%   | 50    
+hier_50                   | 20.00%   | 44.00%   | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_01
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 32.00%   | 34.00%   | 50    
+clustered_25              | 28.00%   | 36.00%   | 50    
+clustered_50              | 30.00%   | 8.00%    | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 28.00%   | 50    
+hier_25                   | 42.00%   | 12.00%   | 50    
+hier_50                   | 48.00%   | 6.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_02
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 42.00%   | 24.00%   | 50    
+clustered_25              | 42.00%   | 14.00%   | 50    
+clustered_50              | 42.00%   | 6.00%    | 50    
+flat                      | 64.00%   | 2.00%    | 50    
+hier                      | 50.00%   | 22.00%   | 50    
+hier_25                   | 38.00%   | 28.00%   | 50    
+hier_50                   | 54.00%   | 6.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_03
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 30.00%   | 20.00%   | 50    
+clustered_25              | 24.00%   | 34.00%   | 50    
+clustered_50              | 46.00%   | 12.00%   | 50    
+flat                      | 60.00%   | 0.00%    | 50    
+hier                      | 64.00%   | 16.00%   | 50    
+hier_25                   | 36.00%   | 18.00%   | 50    
+hier_50                   | 48.00%   | 6.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_04
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 28.00%   | 28.00%   | 50    
+clustered_25              | 36.00%   | 22.00%   | 50    
+clustered_50              | 28.00%   | 0.00%    | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 22.00%   | 50    
+hier_25                   | 40.00%   | 32.00%   | 50    
+hier_50                   | 48.00%   | 4.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_05
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 32.00%   | 24.00%   | 50    
+clustered_25              | 24.00%   | 34.00%   | 50    
+clustered_50              | 34.00%   | 10.00%   | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 68.00%   | 4.00%    | 50    
+hier_25                   | 24.00%   | 24.00%   | 50    
+hier_50                   | 60.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_06
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 36.00%   | 18.00%   | 50    
+clustered_25              | 20.00%   | 20.00%   | 50    
+clustered_50              | 42.00%   | 8.00%    | 50    
+flat                      | 66.00%   | 0.00%    | 50    
+hier                      | 54.00%   | 14.00%   | 50    
+hier_25                   | 28.00%   | 26.00%   | 50    
+hier_50                   | 54.00%   | 2.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_07
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 38.00%   | 6.00%    | 50    
+clustered_25              | 18.00%   | 50.00%   | 50    
+clustered_50              | 42.00%   | 4.00%    | 50    
+flat                      | 64.00%   | 0.00%    | 50    
+hier                      | 52.00%   | 6.00%    | 50    
+hier_25                   | 34.00%   | 24.00%   | 50    
+hier_50                   | 40.00%   | 6.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_08
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 34.00%   | 22.00%   | 50    
+clustered_25              | 24.00%   | 46.00%   | 50    
+clustered_50              | 40.00%   | 14.00%   | 50    
+flat                      | 58.00%   | 0.00%    | 50    
+hier                      | 54.00%   | 8.00%    | 50    
+hier_25                   | 44.00%   | 22.00%   | 50    
+hier_50                   | 42.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_09
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 20.00%   | 50    
+clustered_25              | 12.00%   | 50.00%   | 50    
+clustered_50              | 38.00%   | 20.00%   | 50    
+flat                      | 72.00%   | 0.00%    | 50    
+hier                      | 50.00%   | 16.00%   | 50    
+hier_25                   | 18.00%   | 38.00%   | 50    
+hier_50                   | 44.00%   | 0.00%    | 50    
+
+>>> [EVAL REPORT] Model: Llama-3.2-3B | Scene: scene_complex_10
+Variant                   | Acc      | FVR      | Count 
+-------------------------------------------------------
+clustered                 | 26.00%   | 16.00%   | 50    
+clustered_25              | 20.00%   | 28.00%   | 50    
+clustered_50              | 34.00%   | 18.00%   | 50    
+flat                      | 70.00%   | 0.00%    | 50    
+hier                      | 48.00%   | 6.00%    | 50    
+hier_25                   | 24.00%   | 4.00%    | 50    
+hier_50                   | 32.00%   | 0.00%    | 50    
+[EVAL FINISHED] Summary saved to: /root/shiyan/analysis_ieq_dim

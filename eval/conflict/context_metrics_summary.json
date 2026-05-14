@@ -1,0 +1,924 @@
+{
+  "config": {
+    "core_tasks": [
+      "ObjectLocation",
+      "TopologyYN",
+      "ReachabilityYN",
+      "PathGen"
+    ],
+    "all_tasks": [
+      "ObjectLocation",
+      "TopologyYN",
+      "ReachabilityYN",
+      "PathGen",
+      "GeometryYN"
+    ],
+    "conditions": [
+      "combo_topo",
+      "combo_geom",
+      "conflict_sem"
+    ]
+  },
+  "results": {
+    "Llama-3.1-8B": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.76,
+        "mean_acc_geom": 0.49000000000000005,
+        "cue_dominance_score": 0.26999999999999996,
+        "geom_specialization_geomYN": 0.6799999999999999,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.76,
+        "conflict_acc_sem": 0.5599999999999999,
+        "SAHI_score": 0.2631578943905818,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.08,
+          "TopologyYN": 0.19999999999999998,
+          "ReachabilityYN": 0.12000000000000002,
+          "PathGen": 0.4
+        },
+        "pathgen_fragility": 0.4,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.7,
+          "combo_geom_core_acc": 0.55,
+          "conflict_sem_core_acc": 0.5,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.8,
+          "combo_geom_core_acc": 0.45,
+          "conflict_sem_core_acc": 0.65,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.8,
+          "combo_geom_core_acc": 0.4,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.20000000000000007,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.7,
+          "combo_geom_core_acc": 0.35,
+          "conflict_sem_core_acc": 0.6,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.19999999999999996,
+            "TopologyYN": 0.4,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.8,
+          "combo_geom_core_acc": 0.7,
+          "conflict_sem_core_acc": 0.5,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.20000000000000007,
+            "PathGen": 0.8
+          }
+        }
+      ]
+    },
+    "Llama-3.2-1B": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.39,
+        "mean_acc_geom": 0.26,
+        "cue_dominance_score": 0.13,
+        "geom_specialization_geomYN": 0.32,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.39,
+        "conflict_acc_sem": 0.35,
+        "SAHI_score": 0.10256410230111776,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.0,
+          "TopologyYN": 0.039999999999999994,
+          "ReachabilityYN": 0.0,
+          "PathGen": 0.12000000000000002
+        },
+        "pathgen_fragility": 0.12000000000000002,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.3,
+          "combo_geom_core_acc": 0.3,
+          "conflict_sem_core_acc": 0.35,
+          "combo_geom_geomYN_acc": 0.2,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.5,
+          "combo_geom_core_acc": 0.25,
+          "conflict_sem_core_acc": 0.35,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.3,
+          "combo_geom_core_acc": 0.2,
+          "conflict_sem_core_acc": 0.3,
+          "combo_geom_geomYN_acc": 0.2,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.35,
+          "combo_geom_core_acc": 0.25,
+          "conflict_sem_core_acc": 0.35,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.5,
+          "combo_geom_core_acc": 0.3,
+          "conflict_sem_core_acc": 0.4,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.2
+          }
+        }
+      ]
+    },
+    "Llama-3.2-3B": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.5900000000000001,
+        "mean_acc_geom": 0.35,
+        "cue_dominance_score": 0.2400000000000001,
+        "geom_specialization_geomYN": 0.9199999999999999,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.5900000000000001,
+        "conflict_acc_sem": 0.47000000000000003,
+        "SAHI_score": 0.20338983016374612,
+        "per_task_drop_mean": {
+          "ObjectLocation": -2.2204460492503132e-17,
+          "TopologyYN": 0.11999999999999997,
+          "ReachabilityYN": 0.19999999999999998,
+          "PathGen": 0.16
+        },
+        "pathgen_fragility": 0.16,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.6,
+          "combo_geom_core_acc": 0.25,
+          "conflict_sem_core_acc": 0.25,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.39999999999999997,
+            "ReachabilityYN": 0.6,
+            "PathGen": 0.39999999999999997
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.65,
+          "combo_geom_core_acc": 0.25,
+          "conflict_sem_core_acc": 0.65,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": -0.19999999999999996,
+            "PathGen": 0.20000000000000007
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.5,
+          "combo_geom_core_acc": 0.5,
+          "conflict_sem_core_acc": 0.4,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.65,
+          "combo_geom_core_acc": 0.25,
+          "conflict_sem_core_acc": 0.45,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.39999999999999997
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.55,
+          "combo_geom_core_acc": 0.5,
+          "conflict_sem_core_acc": 0.6,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.20000000000000007,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": -0.19999999999999996
+          }
+        }
+      ]
+    },
+    "Qwen3-0.6B": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.49000000000000005,
+        "mean_acc_geom": 0.49000000000000005,
+        "cue_dominance_score": 0.0,
+        "geom_specialization_geomYN": 0.96,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.49000000000000005,
+        "conflict_acc_sem": 0.44000000000000006,
+        "SAHI_score": 0.10204081611828401,
+        "per_task_drop_mean": {
+          "ObjectLocation": -0.2,
+          "TopologyYN": 0.0,
+          "ReachabilityYN": 0.0,
+          "PathGen": 0.4
+        },
+        "pathgen_fragility": 0.4,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.5,
+          "combo_geom_core_acc": 0.5,
+          "conflict_sem_core_acc": 0.5,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.4,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.45,
+          "combo_geom_core_acc": 0.45,
+          "conflict_sem_core_acc": 0.45,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.39999999999999997,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.5,
+          "combo_geom_core_acc": 0.5,
+          "conflict_sem_core_acc": 0.4,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.39999999999999997
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.45,
+          "combo_geom_core_acc": 0.45,
+          "conflict_sem_core_acc": 0.35,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.55,
+          "combo_geom_core_acc": 0.55,
+          "conflict_sem_core_acc": 0.5,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.39999999999999997
+          }
+        }
+      ]
+    },
+    "Qwen3-1.7B": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.63,
+        "mean_acc_geom": 0.45,
+        "cue_dominance_score": 0.18,
+        "geom_specialization_geomYN": 0.56,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.63,
+        "conflict_acc_sem": 0.51,
+        "SAHI_score": 0.19047619017384732,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.08,
+          "TopologyYN": -0.08,
+          "ReachabilityYN": 0.2,
+          "PathGen": 0.27999999999999997
+        },
+        "pathgen_fragility": 0.27999999999999997,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.75,
+          "combo_geom_core_acc": 0.45,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.20000000000000007,
+            "TopologyYN": 0.20000000000000007,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.6,
+          "combo_geom_core_acc": 0.4,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.6,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.39999999999999997
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.55,
+          "combo_geom_core_acc": 0.45,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": -0.20000000000000007,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.20000000000000007
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.6,
+          "combo_geom_core_acc": 0.45,
+          "conflict_sem_core_acc": 0.5,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.4,
+            "TopologyYN": -0.4,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.65,
+          "combo_geom_core_acc": 0.5,
+          "conflict_sem_core_acc": 0.4,
+          "combo_geom_geomYN_acc": 0.6,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.4,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.2
+          }
+        }
+      ]
+    },
+    "Qwen3-4B": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.82,
+        "mean_acc_geom": 0.5900000000000001,
+        "cue_dominance_score": 0.22999999999999987,
+        "geom_specialization_geomYN": 0.8,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.82,
+        "conflict_acc_sem": 0.65,
+        "SAHI_score": 0.20731707291790594,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.08,
+          "TopologyYN": 0.040000000000000036,
+          "ReachabilityYN": 0.2,
+          "PathGen": 0.36
+        },
+        "pathgen_fragility": 0.36,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.9,
+          "combo_geom_core_acc": 0.55,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.4,
+            "TopologyYN": 0.20000000000000007,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.75,
+          "combo_geom_core_acc": 0.5,
+          "conflict_sem_core_acc": 0.8,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": -0.4,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.8,
+          "combo_geom_core_acc": 0.6,
+          "conflict_sem_core_acc": 0.8,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": -0.39999999999999997,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.8,
+          "combo_geom_core_acc": 0.75,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.4,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.6
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.85,
+          "combo_geom_core_acc": 0.55,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.4,
+            "ReachabilityYN": 0.20000000000000007,
+            "PathGen": 0.6
+          }
+        }
+      ]
+    },
+    "gemini-3-flash-preview": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.96,
+        "mean_acc_geom": 0.9399999999999998,
+        "cue_dominance_score": 0.02000000000000013,
+        "geom_specialization_geomYN": 0.8799999999999999,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.96,
+        "conflict_acc_sem": 0.8800000000000001,
+        "SAHI_score": 0.08333333324652763,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.0,
+          "TopologyYN": 0.0,
+          "ReachabilityYN": 0.16,
+          "PathGen": 0.16
+        },
+        "pathgen_fragility": 0.16,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 1.0,
+          "conflict_sem_core_acc": 0.9,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.20000000000000007
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.9,
+          "conflict_sem_core_acc": 0.95,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": -0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.9,
+          "combo_geom_core_acc": 1.0,
+          "conflict_sem_core_acc": 0.95,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": -0.19999999999999996,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.95,
+          "conflict_sem_core_acc": 0.85,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.85,
+          "conflict_sem_core_acc": 0.75,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.4
+          }
+        }
+      ]
+    },
+    "gpt-5.2": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.97,
+        "mean_acc_geom": 0.9200000000000002,
+        "cue_dominance_score": 0.04999999999999982,
+        "geom_specialization_geomYN": 0.96,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.97,
+        "conflict_acc_sem": 0.9,
+        "SAHI_score": 0.07216494837921135,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.039999999999999994,
+          "TopologyYN": 0.07999999999999999,
+          "ReachabilityYN": 0.08,
+          "PathGen": 0.07999999999999999
+        },
+        "pathgen_fragility": 0.07999999999999999,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.95,
+          "conflict_sem_core_acc": 0.8,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.9,
+          "conflict_sem_core_acc": 0.95,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 1.0,
+          "conflict_sem_core_acc": 1.0,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": -0.19999999999999996,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.85,
+          "conflict_sem_core_acc": 0.95,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.9,
+          "conflict_sem_core_acc": 0.8,
+          "combo_geom_geomYN_acc": 1.0,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.20000000000000007,
+            "PathGen": 0.19999999999999996
+          }
+        }
+      ]
+    },
+    "qwen3-14b": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.9400000000000001,
+        "mean_acc_geom": 0.71,
+        "cue_dominance_score": 0.2300000000000001,
+        "geom_specialization_geomYN": 0.5199999999999999,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.9400000000000001,
+        "conflict_acc_sem": 0.7000000000000001,
+        "SAHI_score": 0.2553191486645541,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.039999999999999994,
+          "TopologyYN": 0.24000000000000005,
+          "ReachabilityYN": 0.36000000000000004,
+          "PathGen": 0.31999999999999995
+        },
+        "pathgen_fragility": 0.31999999999999995,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 0.9,
+          "combo_geom_core_acc": 0.65,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.4,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.75,
+          "conflict_sem_core_acc": 0.8,
+          "combo_geom_geomYN_acc": 0.6,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.4,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.7,
+          "conflict_sem_core_acc": 0.85,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.19999999999999996,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.9,
+          "combo_geom_core_acc": 0.75,
+          "conflict_sem_core_acc": 0.7,
+          "combo_geom_geomYN_acc": 0.4,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.4,
+            "ReachabilityYN": 0.20000000000000007,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.7,
+          "conflict_sem_core_acc": 0.6,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.20000000000000007,
+            "ReachabilityYN": 0.6,
+            "PathGen": 0.6
+          }
+        }
+      ]
+    },
+    "qwen3-32b": {
+      "n_scenes": 5,
+      "C1": {
+        "mean_acc_topo": 0.96,
+        "mean_acc_geom": 0.7,
+        "cue_dominance_score": 0.26,
+        "geom_specialization_geomYN": 0.8,
+        "note": "Computed on CORE_TASKS (excluding GeometryYN) to ensure topology fairness."
+      },
+      "C2": {
+        "shield_acc_topo": 0.96,
+        "conflict_acc_sem": 0.7699999999999999,
+        "SAHI_score": 0.19791666646050354,
+        "per_task_drop_mean": {
+          "ObjectLocation": 0.039999999999999994,
+          "TopologyYN": 0.27999999999999997,
+          "ReachabilityYN": 0.23999999999999994,
+          "PathGen": 0.2
+        },
+        "pathgen_fragility": 0.2,
+        "note": "Quantifies performance degradation under semantic ambiguity."
+      },
+      "scene_level_raw": [
+        {
+          "scene_file": "scene_cengji_01_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.7,
+          "conflict_sem_core_acc": 0.55,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.19999999999999996,
+            "TopologyYN": 0.6,
+            "ReachabilityYN": 0.6,
+            "PathGen": 0.4
+          }
+        },
+        {
+          "scene_file": "scene_cengji_02_summary.json",
+          "combo_topo_core_acc": 0.9,
+          "combo_geom_core_acc": 0.75,
+          "conflict_sem_core_acc": 0.85,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_03_summary.json",
+          "combo_topo_core_acc": 1.0,
+          "combo_geom_core_acc": 0.65,
+          "conflict_sem_core_acc": 0.95,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.0,
+            "PathGen": 0.19999999999999996
+          }
+        },
+        {
+          "scene_file": "scene_cengji_04_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.75,
+          "conflict_sem_core_acc": 0.7,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.8,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.0
+          }
+        },
+        {
+          "scene_file": "scene_cengji_05_summary.json",
+          "combo_topo_core_acc": 0.95,
+          "combo_geom_core_acc": 0.65,
+          "conflict_sem_core_acc": 0.8,
+          "combo_geom_geomYN_acc": 0.8,
+          "per_task_drop_core": {
+            "ObjectLocation": 0.0,
+            "TopologyYN": 0.0,
+            "ReachabilityYN": 0.19999999999999996,
+            "PathGen": 0.4
+          }
+        }
+      ]
+    }
+  }
+}

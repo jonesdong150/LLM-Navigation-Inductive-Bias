@@ -1,0 +1,95 @@
+{
+  "clustered": {
+    "overall_accuracy": 0.24,
+    "overall_fvr": 0.18,
+    "tasks": {
+      "ObjectLocation": {
+        "accuracy": 0.3,
+        "format_violation_rate": 0.3,
+        "count": 10
+      },
+      "GeometryYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.2,
+        "count": 10
+      },
+      "TopologyYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.2,
+        "count": 10
+      },
+      "ReachabilityYN": {
+        "accuracy": 0.3,
+        "format_violation_rate": 0.1,
+        "count": 10
+      },
+      "PathGen": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.1,
+        "count": 10
+      }
+    }
+  },
+  "flat": {
+    "overall_accuracy": 0.38,
+    "overall_fvr": 0.12,
+    "tasks": {
+      "ObjectLocation": {
+        "accuracy": 1.0,
+        "format_violation_rate": 0.6,
+        "count": 10
+      },
+      "GeometryYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "TopologyYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "ReachabilityYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "PathGen": {
+        "accuracy": 0.3,
+        "format_violation_rate": 0.0,
+        "count": 10
+      }
+    }
+  },
+  "hier": {
+    "overall_accuracy": 0.32,
+    "overall_fvr": 0.24,
+    "tasks": {
+      "ObjectLocation": {
+        "accuracy": 0.8,
+        "format_violation_rate": 0.6,
+        "count": 10
+      },
+      "GeometryYN": {
+        "accuracy": 0.1,
+        "format_violation_rate": 0.1,
+        "count": 10
+      },
+      "TopologyYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "ReachabilityYN": {
+        "accuracy": 0.4,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "PathGen": {
+        "accuracy": 0.1,
+        "format_violation_rate": 0.5,
+        "count": 10
+      }
+    }
+  }
+}

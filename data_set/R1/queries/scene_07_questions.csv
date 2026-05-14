@@ -1,0 +1,51 @@
+question_id,task_type,question_text,answer_format,ground_truth
+q01,ObjectLocation,Where is the Shelf currently located?,ROOM_ID,R1
+q02,ObjectLocation,Where is the Cabinet currently located?,ROOM_ID,R2
+q03,ObjectLocation,Where is the Fridge currently located?,ROOM_ID,R3
+q04,ObjectLocation,Where is the Shelf currently located?,ROOM_ID,R4
+q05,ObjectLocation,Where is the Shelf currently located?,ROOM_ID,R5
+q06,ObjectLocation,Where is the Shelf currently located?,ROOM_ID,R1
+q07,ObjectLocation,Where is the Cabinet currently located?,ROOM_ID,R2
+q08,ObjectLocation,Where is the Fridge currently located?,ROOM_ID,R3
+q09,ObjectLocation,Where is the Shelf currently located?,ROOM_ID,R4
+q10,ObjectLocation,Where is the Shelf currently located?,ROOM_ID,R5
+q11,GeometryYN,Is the Kitchen (R2) located at the same latitude as the Living Room (R3)?,YES_NO,NO
+q12,GeometryYN,Is the Kitchen (R2) located at the same latitude as the Living Room (R3)?,YES_NO,NO
+q13,GeometryYN,Is the Kitchen (R2) located South the Bathroom (R5)?,YES_NO,YES
+q14,GeometryYN,Is the Living Room (R3) located South the Bedroom (R4)?,YES_NO,YES
+q15,GeometryYN,Is the Living Room (R3) located South the Bedroom (R4)?,YES_NO,YES
+q16,GeometryYN,Is the Kitchen (R2) located at the same latitude as the Living Room (R3)?,YES_NO,NO
+q17,GeometryYN,Is the Bedroom (R4) located North the Kitchen (R2)?,YES_NO,YES
+q18,GeometryYN,Is the Living Room (R3) located South the Bathroom (R5)?,YES_NO,YES
+q19,GeometryYN,Is the Living Room (R3) located South the Bathroom (R5)?,YES_NO,YES
+q20,GeometryYN,Is the Bathroom (R5) located North the Kitchen (R2)?,YES_NO,YES
+q21,TopologyYN,Is there a direct connection between R2 and R4?,YES_NO,NO
+q22,TopologyYN,Is there a direct connection between R2 and R1?,YES_NO,YES
+q23,TopologyYN,Is there a direct connection between R4 and R1?,YES_NO,NO
+q24,TopologyYN,Is there a direct connection between R2 and R5?,YES_NO,NO
+q25,TopologyYN,Is there a direct connection between R4 and R1?,YES_NO,NO
+q26,TopologyYN,Is there a direct connection between R3 and R2?,YES_NO,YES
+q27,TopologyYN,Is there a direct connection between R5 and R4?,YES_NO,YES
+q28,TopologyYN,Is there a direct connection between R3 and R2?,YES_NO,YES
+q29,TopologyYN,Is there a direct connection between R2 and R1?,YES_NO,YES
+q30,TopologyYN,Is there a direct connection between R5 and R3?,YES_NO,NO
+q31,ReachabilityYN,Can you reach R4 from R2?,YES_NO,YES
+q32,ReachabilityYN,Can you reach R3 from R2?,YES_NO,YES
+q33,ReachabilityYN,Can you reach R3 from R1?,YES_NO,YES
+q34,ReachabilityYN,Can you reach R4 from R3?,YES_NO,YES
+q35,ReachabilityYN,Can you reach R2 from R1?,YES_NO,YES
+q36,ReachabilityYN,Can you reach R5 from R2?,YES_NO,YES
+q37,ReachabilityYN,Can you reach R4 from R3?,YES_NO,YES
+q38,ReachabilityYN,Can you reach R3 from R2?,YES_NO,YES
+q39,ReachabilityYN,Can you reach R4 from R1?,YES_NO,YES
+q40,ReachabilityYN,Can you reach R2 from R3?,YES_NO,YES
+q41,PathGen,Provide the shortest path from R5 to R2.,PATH,R5->R1->R2
+q42,PathGen,Provide the shortest path from R5 to R1.,PATH,R5->R1
+q43,PathGen,Provide the shortest path from R3 to R4.,PATH,R3->R4
+q44,PathGen,Provide the shortest path from R2 to R5.,PATH,R2->R1->R5
+q45,PathGen,Provide the shortest path from R1 to R4.,PATH,R1->R5->R4
+q46,PathGen,Provide the shortest path from R3 to R2.,PATH,R3->R2
+q47,PathGen,Provide the shortest path from R3 to R2.,PATH,R3->R2
+q48,PathGen,Provide the shortest path from R2 to R5.,PATH,R2->R1->R5
+q49,PathGen,Provide the shortest path from R1 to R3.,PATH,R1->R2->R3
+q50,PathGen,Provide the shortest path from R2 to R1.,PATH,R2->R1

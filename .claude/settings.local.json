@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -3 -c ' *)",
+      "Bash(py -3 tests/test_scene_serializer.py)",
+      "Bash(py -3 tests/test_generate_dataset.py)",
+      "Bash(py -3 tools/validate_dataset.py --base_dir ./data_set --validate --check_equivalence)",
+      "Bash(py -3 tools/generate_dataset.py --output_dir ./data_set --seed 42 --conflict_scenes 5 --queries_per_scene 50)"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "clustered": {
+    "overall_accuracy": 0.36,
+    "overall_fvr": 0.52,
+    "tasks": {
+      "ObjectLocation": {
+        "accuracy": 0.5,
+        "format_violation_rate": 0.8,
+        "count": 10
+      },
+      "GeometryYN": {
+        "accuracy": 0.3,
+        "format_violation_rate": 0.3,
+        "count": 10
+      },
+      "TopologyYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.3,
+        "count": 10
+      },
+      "ReachabilityYN": {
+        "accuracy": 0.5,
+        "format_violation_rate": 0.2,
+        "count": 10
+      },
+      "PathGen": {
+        "accuracy": 0.3,
+        "format_violation_rate": 1.0,
+        "count": 10
+      }
+    }
+  },
+  "flat": {
+    "overall_accuracy": 0.5,
+    "overall_fvr": 0.2,
+    "tasks": {
+      "ObjectLocation": {
+        "accuracy": 0.8,
+        "format_violation_rate": 1.0,
+        "count": 10
+      },
+      "GeometryYN": {
+        "accuracy": 0.3,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "TopologyYN": {
+        "accuracy": 0.5,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "ReachabilityYN": {
+        "accuracy": 0.5,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "PathGen": {
+        "accuracy": 0.4,
+        "format_violation_rate": 0.0,
+        "count": 10
+      }
+    }
+  },
+  "hier": {
+    "overall_accuracy": 0.3,
+    "overall_fvr": 0.36,
+    "tasks": {
+      "ObjectLocation": {
+        "accuracy": 0.4,
+        "format_violation_rate": 0.4,
+        "count": 10
+      },
+      "GeometryYN": {
+        "accuracy": 0.1,
+        "format_violation_rate": 0.1,
+        "count": 10
+      },
+      "TopologyYN": {
+        "accuracy": 0.4,
+        "format_violation_rate": 0.0,
+        "count": 10
+      },
+      "ReachabilityYN": {
+        "accuracy": 0.2,
+        "format_violation_rate": 0.5,
+        "count": 10
+      },
+      "PathGen": {
+        "accuracy": 0.4,
+        "format_violation_rate": 0.8,
+        "count": 10
+      }
+    }
+  }
+}

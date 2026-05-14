@@ -1,0 +1,5 @@
+{scene_text}
+
+Question: {query_text}
+
+Answer:

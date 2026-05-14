@@ -1,0 +1,336 @@
+{
+  "scene_id": "scene_complex_03",
+  "description": "Complex scene 03: G2 - Intermediate planning (8 rooms)",
+  "world": {
+    "scene_name": "scene_complex_03",
+    "gradient": "G2",
+    "gradient_label": "Intermediate planning",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "type": "Bathroom",
+        "x": 0,
+        "y": 8
+      },
+      {
+        "idx": 1,
+        "room_id": "R2",
+        "type": "Corridor",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "idx": 2,
+        "room_id": "R3",
+        "type": "Reception",
+        "x": 8,
+        "y": 8
+      },
+      {
+        "idx": 3,
+        "room_id": "R4",
+        "type": "Lounge",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "idx": 4,
+        "room_id": "R5",
+        "type": "Bathroom",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "idx": 5,
+        "room_id": "R6",
+        "type": "Corridor",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "idx": 6,
+        "room_id": "R7",
+        "type": "Reception",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "idx": 7,
+        "room_id": "R8",
+        "type": "Lounge",
+        "x": 4,
+        "y": 0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "objects": {
+      "0": [
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "IT",
+          "Monitor"
+        ],
+        [
+          "Tools",
+          "Screwdriver"
+        ],
+        [
+          "Tools",
+          "Tape"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ]
+      ],
+      "1": [
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Tools",
+          "Wrench"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Tools",
+          "Hammer"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ]
+      ],
+      "2": [
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Security",
+          "Lock"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Tools",
+          "Gloves"
+        ]
+      ],
+      "3": [
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ]
+      ],
+      "4": [
+        [
+          "IT",
+          "Laptop"
+        ],
+        [
+          "IT",
+          "Laptop"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ]
+      ],
+      "5": [
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "Tools",
+          "Wrench"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Tools",
+          "Drill"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ]
+      ],
+      "6": [
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "Tools",
+          "Drill"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Tools",
+          "Tape"
+        ],
+        [
+          "Security",
+          "Gate"
+        ]
+      ],
+      "7": [
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Tools",
+          "Cutter"
+        ],
+        [
+          "IT",
+          "Laptop"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ]
+      ]
+    },
+    "history": [
+      0,
+      1,
+      0,
+      1,
+      4
+    ],
+    "rules": [
+      "When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.",
+      "Do not repeat a room in the path unless necessary.",
+      "If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence."
+    ]
+  },
+  "variants": {
+    "flat_full": "You are in the scene 'scene_complex_03'.\nRooms and coordinates:\n- R1 (Bathroom) @ (0,8)\n  Objects: Security:Light, IT:Monitor, Tools:Screwdriver, Tools:Tape, IT:Server, Security:Alarm\n- R2 (Corridor) @ (4,8)\n  Objects: Security:Light, IT:Server, Tools:Wrench, IT:Server, Tools:Hammer, Security:Sensor\n- R3 (Reception) @ (8,8)\n  Objects: IT:Router, IT:Scanner, Security:BadgeReader, Security:Lock, Security:Alarm, Tools:Gloves\n- R4 (Lounge) @ (8,4)\n  Objects: IT:Tablet, Security:Sensor, IT:Tablet, Security:Gate, Security:BadgeReader, IT:Scanner\n- R5 (Bathroom) @ (4,4)\n  Objects: IT:Laptop, IT:Laptop, IT:Server, IT:Scanner, Security:Gate, IT:Scanner\n- R6 (Corridor) @ (0,4)\n  Objects: Security:Light, Security:Camera, Tools:Wrench, IT:Server, Tools:Drill, Security:Sensor\n- R7 (Reception) @ (0,0)\n  Objects: Security:BadgeReader, Security:Gate, Tools:Drill, IT:Server, Tools:Tape, Security:Gate\n- R8 (Lounge) @ (4,0)\n  Objects: IT:Printer, Tools:Cutter, IT:Laptop, Security:Camera, IT:Router, Security:BadgeReader\nTopology edges: R1-R2, R1-R6, R2-R3, R2-R5, R4-R5, R5-R6, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R2(t4) -> R5(t5).\nRules/constraints:\n- When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.\n- Do not repeat a room in the path unless necessary.\n- If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence.",
+    "flat_topo_hist": "You are given a set of room IDs and how they connect (topology).\nRooms: R1, R2, R3, R4, R5, R6, R7, R8.\nTopology edges: R1-R2, R1-R6, R2-R3, R2-R5, R4-R5, R5-R6, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R2(t4) -> R5(t5).\nConstraint: When generating a path, output the shortest valid path unless the question specifies otherwise.",
+    "flat_geom_rule_hist": "You are given room coordinates. You must infer connectivity using the rules below.\nRooms and coordinates:\n- R1 @ (0,8)\n- R2 @ (4,8)\n- R3 @ (8,8)\n- R4 @ (8,4)\n- R5 @ (4,4)\n- R6 @ (0,4)\n- R7 @ (0,0)\n- R8 @ (4,0)\nRules:\n- Two rooms are connected by a door iff their Manhattan distance is exactly 4.\n- You may assume there are no blocked doors unless the text explicitly says so.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R2(t4) -> R5(t5).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat_sem_rule_hist": "You are given room semantics and room contents. Connectivity is defined by semantic rules below.\nRooms and semantics:\n- R1 is a 'Bathroom'. Objects: Security:Light, IT:Monitor, Tools:Screwdriver, Tools:Tape, IT:Server, Security:Alarm\n- R2 is a 'Corridor'. Objects: Security:Light, IT:Server, Tools:Wrench, IT:Server, Tools:Hammer, Security:Sensor\n- R3 is a 'Reception'. Objects: IT:Router, IT:Scanner, Security:BadgeReader, Security:Lock, Security:Alarm, Tools:Gloves\n- R4 is a 'Lounge'. Objects: IT:Tablet, Security:Sensor, IT:Tablet, Security:Gate, Security:BadgeReader, IT:Scanner\n- R5 is a 'Bathroom'. Objects: IT:Laptop, IT:Laptop, IT:Server, IT:Scanner, Security:Gate, IT:Scanner\n- R6 is a 'Corridor'. Objects: Security:Light, Security:Camera, Tools:Wrench, IT:Server, Tools:Drill, Security:Sensor\n- R7 is a 'Reception'. Objects: Security:BadgeReader, Security:Gate, Tools:Drill, IT:Server, Tools:Tape, Security:Gate\n- R8 is a 'Lounge'. Objects: IT:Printer, Tools:Cutter, IT:Laptop, Security:Camera, IT:Router, Security:BadgeReader\nSemantic connectivity rules (room-chain):\n- The scene provides an ordered chain of rooms. Two rooms are connected iff they are adjacent in this chain.\n- Room chain: R1 -> R2 -> R3 -> R4 -> R5 -> R6 -> R7 -> R8\n- The chain is the ONLY source of connectivity (do not assume any other connections).\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R2(t4) -> R5(t5).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat": "You are in a modern hospital. You start at the Bathroom (R1), located at (0,8), which contains Light, Monitor, Screwdriver, Tape, Server, and a Alarm. Moving East from the Bathroom (R1), you enter the Corridor (R2) at (4,8), which contains Light, Server, Wrench, Server, Hammer, and a Sensor. Moving East from the Corridor (R2), you enter the Reception (R3) at (8,8), which contains Router, Scanner, BadgeReader, Lock, Alarm, and a Gloves. There is also the Lounge (R4) at (8,4), which contains Tablet, Sensor, Tablet, Gate, BadgeReader, and a Scanner. Moving South from the Corridor (R2), you enter the Bathroom (R5) at (4,4), which contains Laptop, Laptop, Server, Scanner, Gate, and a Scanner. Moving South from the Bathroom (R1), you enter the Corridor (R6) at (0,4), which contains Light, Camera, Wrench, Server, Drill, and a Sensor. Moving South from the Corridor (R6), you enter the Reception (R7) at (0,0), which contains BadgeReader, Gate, Drill, Server, Tape, and a Gate. Moving East from the Reception (R7), you enter the Lounge (R8) at (4,0), which contains Printer, Cutter, Laptop, Camera, Router, and a BadgeReader. Interestingly, the Bathroom features a connection back to the Corridor and the Corridor features a connection back to the Bathroom. At t1, a 'Master_Key' was in the Bathroom (R1). At t2, it was picked up and moved to the Corridor (R2). At t3, it was picked up and moved to the Bathroom (R1). At t4, it was picked up and moved to the Corridor (R2). At t5, it was picked up and moved to the Bathroom (R5).",
+    "hier": "[SCENE: modern hospital]\n- [ROOM R1: Bathroom @ (0,8)]\n  - [Objects: Security(Light, Alarm), IT(Monitor, Server), Tools(Screwdriver, Tape)]\n- [ROOM R2: Corridor @ (4,8)]\n  - [Objects: Security(Light, Sensor), IT(Server, Server), Tools(Wrench, Hammer)]\n- [ROOM R3: Reception @ (8,8)]\n  - [Objects: IT(Router, Scanner), Security(BadgeReader, Lock, Alarm), Tools(Gloves)]\n- [ROOM R4: Lounge @ (8,4)]\n  - [Objects: IT(Tablet, Tablet, Scanner), Security(Sensor, Gate, BadgeReader)]\n- [ROOM R5: Bathroom @ (4,4)]\n  - [Objects: IT(Laptop, Laptop, Server, Scanner, Scanner), Security(Gate)]\n- [ROOM R6: Corridor @ (0,4)]\n  - [Objects: Security(Light, Camera, Sensor), Tools(Wrench, Drill), IT(Server)]\n- [ROOM R7: Reception @ (0,0)]\n  - [Objects: Security(BadgeReader, Gate, Gate), Tools(Drill, Tape), IT(Server)]\n- [ROOM R8: Lounge @ (4,0)]\n  - [Objects: IT(Printer, Laptop, Router), Tools(Cutter), Security(Camera, BadgeReader)]\n\n[TOPOLOGY] R1-R2, R1-R6, R2-R3, R2-R5, R4-R5, R5-R6, R6-R7, R7-R8\n[HISTORY] Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R2(t4) -> R5(t5)",
+    "hier_50": "[HIERARCHY]\nScene(03) -> R1,R2,R3,R4,R5,R6,R7,R8\nR1(0,8): {Sec:Lig, IT:Mon, Too:Scr, Too:Tap}\nR2(4,8): {Sec:Lig, IT:Ser, Too:Wre, IT:Ser}\nR3(8,8): {IT:Rou, IT:Sca, Sec:Bad, Sec:Loc}\nR4(8,4): {IT:Tab, Sec:Sen, IT:Tab, Sec:Gat}\nR5(4,4): {IT:Lap, IT:Lap, IT:Ser, IT:Sca}\nR6(0,4): {Sec:Lig, Sec:Cam, Too:Wre, IT:Ser}\nR7(0,0): {Sec:Bad, Sec:Gat, Too:Dri, IT:Ser}\nR8(4,0): {IT:Pri, Too:Cut, IT:Lap, Sec:Cam}\nEdges: R1-R2,R1-R6,R2-R3,R2-R5,R4-R5,R5-R6,R6-R7,R7-R8\nPath: Key@R1>R2>R1>R2>R5",
+    "hier_25": "03[R1(0,8):{Sec, IT, Too}; R2(4,8):{Sec, IT, Too}; R3(8,8):{IT, IT, Sec}; R4(8,4):{IT, Sec, IT}; R5(4,4):{IT, IT, IT}; R6(0,4):{Sec, Sec, Too}; R7(0,0):{Sec, Sec, Too}; R8(4,0):{IT, Too, IT}]. Edges:1-2,1-6,2-3,2-5,4-5,5-6,6-7,7-8. Key:1>2>1>2>5.",
+    "clustered": "[SCENE: modern hospital]\n- [ZONE A: R1, R6, R7, R2]\n  - [R1, R6, R7, R2 Objects]: {Security, Tools, IT}\n- [ZONE B: R5, R8, R3, R4]\n  - [R5, R8, R3, R4 Objects]: {Security, Tools, IT}\n\n[GEOMETRY] A_Center: (1.0, 5.0) | B_Center: (6.0, 4.0)\n[CONNECTIVITY] Zone_A <-> Zone B via R2-R3. Zone_B <-> Zone A via R5-R6\n[HISTORY] Master_Key: Zone_A(R1) -> Zone_A(R1) -> Zone_B(R5)",
+    "clustered_50": "[CLUSTERS]\nA_Zone(R1,R6,R7,R2) @(1,5): {Security/Tools}\nB_Zone(R5,R8,R3,R4) @(6,4): {Security/Tools}\n[LINKS] Zone_A <-> Zone B via R2-R3. Zone_B <-> Zone A via R5-R6\n[TRACE] Key: A(R1)->B(R5).",
+    "clustered_25": "G1(1,5):1,6,7,2. G2(6,4):5,8,3,4. Links:G1-G2(2-3),G1-G2(2-5),G2-G1(5-6),G1-G2(7-8). Key:A>B."
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "scene_id": "scene_conflict_04",
+  "description": "Conflict scene 04: G2 - Intermediate planning (8 rooms)",
+  "world": {
+    "scene_name": "scene_complex_04",
+    "gradient": "G2",
+    "gradient_label": "Intermediate planning",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "type": "Lab",
+        "x": 0,
+        "y": 8
+      },
+      {
+        "idx": 1,
+        "room_id": "R2",
+        "type": "Workshop",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "idx": 2,
+        "room_id": "R3",
+        "type": "Studio",
+        "x": 8,
+        "y": 8
+      },
+      {
+        "idx": 3,
+        "room_id": "R4",
+        "type": "Lounge",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "idx": 4,
+        "room_id": "R5",
+        "type": "Lab",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "idx": 5,
+        "room_id": "R6",
+        "type": "Workshop",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "idx": 6,
+        "room_id": "R7",
+        "type": "Studio",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "idx": 7,
+        "room_id": "R8",
+        "type": "Lounge",
+        "x": 4,
+        "y": 0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "objects": {
+      "0": [
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ]
+      ],
+      "1": [
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ]
+      ],
+      "2": [
+        [
+          "IT",
+          "Monitor"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "IT",
+          "Printer"
+        ]
+      ],
+      "3": [
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ]
+      ],
+      "4": [
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ]
+      ],
+      "5": [
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ]
+      ],
+      "6": [
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ]
+      ],
+      "7": [
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ]
+      ]
+    },
+    "history": [
+      0,
+      5,
+      4,
+      3,
+      4
+    ],
+    "rules": [
+      "When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.",
+      "Do not repeat a room in the path unless necessary.",
+      "If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence."
+    ]
+  },
+  "variants": {
+    "flat_full": "You are in the scene 'scene_complex_04'.\nRooms and coordinates:\n- R1 (Lab) @ (0,8)\n  Objects: Furniture:Bench, Digital:Stylus, Furniture:Bench, Digital:Phone, Furniture:Chair, Furniture:Shelf\n- R2 (Workshop) @ (4,8)\n  Objects: Furniture:Shelf, Digital:Speaker, Digital:Microphone, IT:Server, Digital:Microphone, Digital:Speaker\n- R3 (Studio) @ (8,8)\n  Objects: IT:Monitor, Furniture:Sofa, Furniture:Shelf, Furniture:Chair, IT:Printer, IT:Printer\n- R4 (Lounge) @ (8,4)\n  Objects: Digital:Phone, Digital:Mixer, Furniture:Sofa, Digital:Microphone, Digital:Mixer, Furniture:Table\n- R5 (Lab) @ (4,4)\n  Objects: Furniture:Bench, Furniture:Table, Digital:Microphone, IT:Scanner, Digital:Stylus, Furniture:Desk\n- R6 (Workshop) @ (0,4)\n  Objects: Furniture:Cabinet, IT:Printer, Furniture:Desk, Furniture:Chair, Digital:Speaker, Digital:Kindle\n- R7 (Studio) @ (0,0)\n  Objects: Digital:Mixer, Furniture:Bench, IT:Server, Furniture:Cabinet, Furniture:Chair, Furniture:Chair\n- R8 (Lounge) @ (4,0)\n  Objects: IT:Scanner, Digital:Mixer, Digital:Stylus, Digital:Microphone, Digital:Microphone, IT:Tablet\nTopology edges: R1-R2, R1-R6, R2-R3, R2-R5, R3-R4, R4-R5, R5-R6, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nRules/constraints:\n- When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.\n- Do not repeat a room in the path unless necessary.\n- If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence.",
+    "flat_topo_hist": "You are given a set of room IDs and how they connect (topology).\nRooms: R1, R2, R3, R4, R5, R6, R7, R8.\nTopology edges: R1-R2, R1-R6, R2-R3, R2-R5, R3-R4, R4-R5, R5-R6, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nConstraint: When generating a path, output the shortest valid path unless the question specifies otherwise.",
+    "flat_geom_rule_hist": "You are given room coordinates. You must infer connectivity using the rules below.\nRooms and coordinates:\n- R1 @ (0,8)\n- R2 @ (4,8)\n- R3 @ (8,8)\n- R4 @ (8,4)\n- R5 @ (4,4)\n- R6 @ (0,4)\n- R7 @ (0,0)\n- R8 @ (4,0)\nRules:\n- Two rooms are connected by a door iff their Manhattan distance is exactly 4.\n- You may assume there are no blocked doors unless the text explicitly says so.\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat_sem_rule_hist": "You are given room semantics and room contents. Connectivity is defined by semantic rules below.\nRooms and semantics:\n- R1 is a 'Lab'. Objects: Furniture:Bench, Digital:Stylus, Furniture:Bench, Digital:Phone, Furniture:Chair, Furniture:Shelf\n- R2 is a 'Workshop'. Objects: Furniture:Shelf, Digital:Speaker, Digital:Microphone, IT:Server, Digital:Microphone, Digital:Speaker\n- R3 is a 'Studio'. Objects: IT:Monitor, Furniture:Sofa, Furniture:Shelf, Furniture:Chair, IT:Printer, IT:Printer\n- R4 is a 'Lounge'. Objects: Digital:Phone, Digital:Mixer, Furniture:Sofa, Digital:Microphone, Digital:Mixer, Furniture:Table\n- R5 is a 'Lab'. Objects: Furniture:Bench, Furniture:Table, Digital:Microphone, IT:Scanner, Digital:Stylus, Furniture:Desk\n- R6 is a 'Workshop'. Objects: Furniture:Cabinet, IT:Printer, Furniture:Desk, Furniture:Chair, Digital:Speaker, Digital:Kindle\n- R7 is a 'Studio'. Objects: Digital:Mixer, Furniture:Bench, IT:Server, Furniture:Cabinet, Furniture:Chair, Furniture:Chair\n- R8 is a 'Lounge'. Objects: IT:Scanner, Digital:Mixer, Digital:Stylus, Digital:Microphone, Digital:Microphone, IT:Tablet\nSemantic connectivity rules (room-chain):\n- The scene provides an ordered chain of rooms. Two rooms are connected iff they are adjacent in this chain.\n- Room chain: R1 -> R2 -> R3 -> R4 -> R5 -> R6 -> R7 -> R8\n- The chain is the ONLY source of connectivity (do not assume any other connections).\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "conflict_topo": "You are given topology and history, but they may conflict.\nRooms: R1, R2, R3, R4, R5, R6, R7, R8.\nTopology edges: R1-R2, R2-R3, R2-R5, R3-R4, R4-R5, R5-R6, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nNote: If information conflicts, still output the best path you believe is correct.",
+    "conflict_geom": "You are given room coordinates. You must infer connectivity using the rules below (may be inconsistent).\nRooms and coordinates:\n- R1 @ (0,8)\n- R2 @ (4,8)\n- R3 @ (8,8)\n- R4 @ (8,4)\n- R5 @ (4,4)\n- R6 @ (0,4)\n- R7 @ (0,0)\n- R8 @ (4,0)\nRules:\n- Two rooms are connected by a door iff their Manhattan distance is exactly 8.\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nNote: If information conflicts, still output the best path you believe is correct.",
+    "conflict_sem": "You are given room semantics and room contents. Connectivity rules may conflict with history.\nRooms and semantics:\n- R1 is a 'Lab'. Objects: Furniture:Bench, Digital:Stylus, Furniture:Bench, Digital:Phone, Furniture:Chair, Furniture:Shelf\n- R2 is a 'Workshop'. Objects: Furniture:Shelf, Digital:Speaker, Digital:Microphone, IT:Server, Digital:Microphone, Digital:Speaker\n- R3 is a 'Studio'. Objects: IT:Monitor, Furniture:Sofa, Furniture:Shelf, Furniture:Chair, IT:Printer, IT:Printer\n- R4 is a 'Lounge'. Objects: Digital:Phone, Digital:Mixer, Furniture:Sofa, Digital:Microphone, Digital:Mixer, Furniture:Table\n- R5 is a 'Lab'. Objects: Furniture:Bench, Furniture:Table, Digital:Microphone, IT:Scanner, Digital:Stylus, Furniture:Desk\n- R6 is a 'Workshop'. Objects: Furniture:Cabinet, IT:Printer, Furniture:Desk, Furniture:Chair, Digital:Speaker, Digital:Kindle\n- R7 is a 'Studio'. Objects: Digital:Mixer, Furniture:Bench, IT:Server, Furniture:Cabinet, Furniture:Chair, Furniture:Chair\n- R8 is a 'Lounge'. Objects: IT:Scanner, Digital:Mixer, Digital:Stylus, Digital:Microphone, Digital:Microphone, IT:Tablet\nSemantic connectivity rules (room-chain):\n- The scene provides an ordered chain of rooms. Two rooms are connected iff they are adjacent in this chain.\n- Room chain: R7 -> R3 -> R6 -> R2 -> R8 -> R4 -> R5 -> R1\n- The chain is the ONLY source of connectivity (do not assume any other connections).\nHistory of Master_Key: Master_Key: R1(t1) -> R6(t2) -> R5(t3) -> R4(t4) -> R5(t5).\nNote: If information conflicts, still output the best path you believe is correct."
+  }
+}

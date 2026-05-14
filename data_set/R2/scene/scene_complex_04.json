@@ -1,0 +1,340 @@
+{
+  "scene_id": "scene_complex_04",
+  "description": "Complex scene 04: G2 - Intermediate planning (8 rooms)",
+  "world": {
+    "scene_name": "scene_complex_04",
+    "gradient": "G2",
+    "gradient_label": "Intermediate planning",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "type": "Storage",
+        "x": 0,
+        "y": 8
+      },
+      {
+        "idx": 1,
+        "room_id": "R2",
+        "type": "Kitchen",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "idx": 2,
+        "room_id": "R3",
+        "type": "Corridor",
+        "x": 8,
+        "y": 8
+      },
+      {
+        "idx": 3,
+        "room_id": "R4",
+        "type": "MeetingRoom",
+        "x": 8,
+        "y": 4
+      },
+      {
+        "idx": 4,
+        "room_id": "R5",
+        "type": "Storage",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "idx": 5,
+        "room_id": "R6",
+        "type": "Kitchen",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "idx": 6,
+        "room_id": "R7",
+        "type": "Corridor",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "idx": 7,
+        "room_id": "R8",
+        "type": "MeetingRoom",
+        "x": 4,
+        "y": 0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "objects": {
+      "0": [
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ]
+      ],
+      "1": [
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ]
+      ],
+      "2": [
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "IT",
+          "Server"
+        ]
+      ],
+      "3": [
+        [
+          "IT",
+          "Laptop"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ]
+      ],
+      "4": [
+        [
+          "IT",
+          "Server"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Digital",
+          "Kindle"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "IT",
+          "Monitor"
+        ]
+      ],
+      "5": [
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "IT",
+          "Laptop"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ],
+        [
+          "IT",
+          "Server"
+        ]
+      ],
+      "6": [
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "IT",
+          "Monitor"
+        ],
+        [
+          "IT",
+          "Tablet"
+        ],
+        [
+          "IT",
+          "Router"
+        ],
+        [
+          "IT",
+          "Printer"
+        ],
+        [
+          "IT",
+          "Router"
+        ]
+      ],
+      "7": [
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "IT",
+          "Scanner"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ]
+      ]
+    },
+    "history": [
+      0,
+      1,
+      0,
+      5,
+      0
+    ],
+    "rules": [
+      "When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.",
+      "Do not repeat a room in the path unless necessary.",
+      "If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence."
+    ]
+  },
+  "variants": {
+    "flat_full": "You are in the scene 'scene_complex_04'.\nRooms and coordinates:\n- R1 (Storage) @ (0,8)\n  Objects: Digital:Mixer, IT:Printer, Digital:Mixer, Digital:Mixer, IT:Router, Furniture:Bench\n- R2 (Kitchen) @ (4,8)\n  Objects: Digital:Kindle, Furniture:Sofa, IT:Tablet, IT:Server, IT:Tablet, Furniture:Cabinet\n- R3 (Corridor) @ (8,8)\n  Objects: IT:Printer, Digital:Kindle, Furniture:Chair, Furniture:Sofa, IT:Scanner, IT:Server\n- R4 (MeetingRoom) @ (8,4)\n  Objects: IT:Laptop, Digital:Speaker, IT:Router, Digital:Stylus, Furniture:Cabinet, IT:Scanner\n- R5 (Storage) @ (4,4)\n  Objects: IT:Server, Digital:Stylus, Digital:Projector, Digital:Kindle, Furniture:Cabinet, IT:Monitor\n- R6 (Kitchen) @ (0,4)\n  Objects: Digital:Speaker, Furniture:Table, IT:Laptop, IT:Printer, Furniture:Bench, IT:Server\n- R7 (Corridor) @ (0,0)\n  Objects: IT:Tablet, IT:Monitor, IT:Tablet, IT:Router, IT:Printer, IT:Router\n- R8 (MeetingRoom) @ (4,0)\n  Objects: IT:Scanner, Furniture:Sofa, IT:Scanner, Furniture:Desk, Furniture:Table, Furniture:Sofa\nTopology edges: R1-R2, R1-R6, R2-R3, R2-R5, R4-R5, R5-R6, R5-R8, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R6(t4) -> R1(t5).\nRules/constraints:\n- When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.\n- Do not repeat a room in the path unless necessary.\n- If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence.",
+    "flat_topo_hist": "You are given a set of room IDs and how they connect (topology).\nRooms: R1, R2, R3, R4, R5, R6, R7, R8.\nTopology edges: R1-R2, R1-R6, R2-R3, R2-R5, R4-R5, R5-R6, R5-R8, R6-R7, R7-R8.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R6(t4) -> R1(t5).\nConstraint: When generating a path, output the shortest valid path unless the question specifies otherwise.",
+    "flat_geom_rule_hist": "You are given room coordinates. You must infer connectivity using the rules below.\nRooms and coordinates:\n- R1 @ (0,8)\n- R2 @ (4,8)\n- R3 @ (8,8)\n- R4 @ (8,4)\n- R5 @ (4,4)\n- R6 @ (0,4)\n- R7 @ (0,0)\n- R8 @ (4,0)\nRules:\n- Two rooms are connected by a door iff their Manhattan distance is exactly 4.\n- You may assume there are no blocked doors unless the text explicitly says so.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R6(t4) -> R1(t5).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat_sem_rule_hist": "You are given room semantics and room contents. Connectivity is defined by semantic rules below.\nRooms and semantics:\n- R1 is a 'Storage'. Objects: Digital:Mixer, IT:Printer, Digital:Mixer, Digital:Mixer, IT:Router, Furniture:Bench\n- R2 is a 'Kitchen'. Objects: Digital:Kindle, Furniture:Sofa, IT:Tablet, IT:Server, IT:Tablet, Furniture:Cabinet\n- R3 is a 'Corridor'. Objects: IT:Printer, Digital:Kindle, Furniture:Chair, Furniture:Sofa, IT:Scanner, IT:Server\n- R4 is a 'MeetingRoom'. Objects: IT:Laptop, Digital:Speaker, IT:Router, Digital:Stylus, Furniture:Cabinet, IT:Scanner\n- R5 is a 'Storage'. Objects: IT:Server, Digital:Stylus, Digital:Projector, Digital:Kindle, Furniture:Cabinet, IT:Monitor\n- R6 is a 'Kitchen'. Objects: Digital:Speaker, Furniture:Table, IT:Laptop, IT:Printer, Furniture:Bench, IT:Server\n- R7 is a 'Corridor'. Objects: IT:Tablet, IT:Monitor, IT:Tablet, IT:Router, IT:Printer, IT:Router\n- R8 is a 'MeetingRoom'. Objects: IT:Scanner, Furniture:Sofa, IT:Scanner, Furniture:Desk, Furniture:Table, Furniture:Sofa\nSemantic connectivity rules (room-chain):\n- The scene provides an ordered chain of rooms. Two rooms are connected iff they are adjacent in this chain.\n- Room chain: R1 -> R2 -> R3 -> R4 -> R5 -> R6 -> R7 -> R8\n- The chain is the ONLY source of connectivity (do not assume any other connections).\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R6(t4) -> R1(t5).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat": "You are in a modern hospital. You start at the Storage (R1), located at (0,8), which contains Mixer, Printer, Mixer, Mixer, Router, and a Bench. Moving East from the Storage (R1), you enter the Kitchen (R2) at (4,8), which contains Kindle, Sofa, Tablet, Server, Tablet, and a Cabinet. Moving East from the Kitchen (R2), you enter the Corridor (R3) at (8,8), which contains Printer, Kindle, Chair, Sofa, Scanner, and a Server. There is also the MeetingRoom (R4) at (8,4), which contains Laptop, Speaker, Router, Stylus, Cabinet, and a Scanner. Moving South from the Kitchen (R2), you enter the Storage (R5) at (4,4), which contains Server, Stylus, Projector, Kindle, Cabinet, and a Monitor. Moving South from the Storage (R1), you enter the Kitchen (R6) at (0,4), which contains Speaker, Table, Laptop, Printer, Bench, and a Server. Moving South from the Kitchen (R6), you enter the Corridor (R7) at (0,0), which contains Tablet, Monitor, Tablet, Router, Printer, and a Router. Moving South from the Storage (R5), you enter the MeetingRoom (R8) at (4,0), which contains Scanner, Sofa, Scanner, Desk, Table, and a Sofa. Interestingly, the Storage features a connection back to the Kitchen and the Kitchen features a connection back to the Storage. At t1, a 'Master_Key' was in the Storage (R1). At t2, it was picked up and moved to the Kitchen (R2). At t3, it was picked up and moved to the Storage (R1). At t4, it was picked up and moved to the Kitchen (R6). At t5, it was picked up and moved to the Storage (R1).",
+    "hier": "[SCENE: modern hospital]\n- [ROOM R1: Storage @ (0,8)]\n  - [Objects: Digital(Mixer, Mixer, Mixer), IT(Printer, Router), Furniture(Bench)]\n- [ROOM R2: Kitchen @ (4,8)]\n  - [Objects: Digital(Kindle), Furniture(Sofa, Cabinet), IT(Tablet, Server, Tablet)]\n- [ROOM R3: Corridor @ (8,8)]\n  - [Objects: IT(Printer, Scanner, Server), Digital(Kindle), Furniture(Chair, Sofa)]\n- [ROOM R4: MeetingRoom @ (8,4)]\n  - [Objects: IT(Laptop, Router, Scanner), Digital(Speaker, Stylus), Furniture(Cabinet)]\n- [ROOM R5: Storage @ (4,4)]\n  - [Objects: IT(Server, Monitor), Digital(Stylus, Projector, Kindle), Furniture(Cabinet)]\n- [ROOM R6: Kitchen @ (0,4)]\n  - [Objects: Digital(Speaker), Furniture(Table, Bench), IT(Laptop, Printer, Server)]\n- [ROOM R7: Corridor @ (0,0)]\n  - [Objects: IT(Tablet, Monitor, Tablet, Router, Printer, Router)]\n- [ROOM R8: MeetingRoom @ (4,0)]\n  - [Objects: IT(Scanner, Scanner), Furniture(Sofa, Desk, Table, Sofa)]\n\n[TOPOLOGY] R1-R2, R1-R6, R2-R3, R2-R5, R4-R5, R5-R6, R5-R8, R6-R7, R7-R8\n[HISTORY] Master_Key: R1(t1) -> R2(t2) -> R1(t3) -> R6(t4) -> R1(t5)",
+    "hier_50": "[HIERARCHY]\nScene(04) -> R1,R2,R3,R4,R5,R6,R7,R8\nR1(0,8): {Dig:Mix, IT:Pri, Dig:Mix, Dig:Mix}\nR2(4,8): {Dig:Kin, Fur:Sof, IT:Tab, IT:Ser}\nR3(8,8): {IT:Pri, Dig:Kin, Fur:Cha, Fur:Sof}\nR4(8,4): {IT:Lap, Dig:Spe, IT:Rou, Dig:Sty}\nR5(4,4): {IT:Ser, Dig:Sty, Dig:Pro, Dig:Kin}\nR6(0,4): {Dig:Spe, Fur:Tab, IT:Lap, IT:Pri}\nR7(0,0): {IT:Tab, IT:Mon, IT:Tab, IT:Rou}\nR8(4,0): {IT:Sca, Fur:Sof, IT:Sca, Fur:Des}\nEdges: R1-R2,R1-R6,R2-R3,R2-R5,R4-R5,R5-R6,R5-R8,R6-R7,R7-R8\nPath: Key@R1>R2>R1>R6>R1",
+    "hier_25": "04[R1(0,8):{Dig, IT, Dig}; R2(4,8):{Dig, Fur, IT}; R3(8,8):{IT, Dig, Fur}; R4(8,4):{IT, Dig, IT}; R5(4,4):{IT, Dig, Dig}; R6(0,4):{Dig, Fur, IT}; R7(0,0):{IT, IT, IT}; R8(4,0):{IT, Fur, IT}]. Edges:1-2,1-6,2-3,2-5,4-5,5-6,5-8,6-7,7-8. Key:1>2>1>6>1.",
+    "clustered": "[SCENE: modern hospital]\n- [ZONE A: R1, R6, R7, R2]\n  - [R1, R6, R7, R2 Objects]: {Furniture, Digital, IT}\n- [ZONE B: R5, R8, R3, R4]\n  - [R5, R8, R3, R4 Objects]: {Furniture, Digital, IT}\n\n[GEOMETRY] A_Center: (1.0, 5.0) | B_Center: (6.0, 4.0)\n[CONNECTIVITY] Zone_A <-> Zone B via R2-R3. Zone_B <-> Zone A via R5-R6\n[HISTORY] Master_Key: Zone_A(R1) -> Zone_A(R1) -> Zone_A(R1)",
+    "clustered_50": "[CLUSTERS]\nA_Zone(R1,R6,R7,R2) @(1,5): {Furniture/Digital}\nB_Zone(R5,R8,R3,R4) @(6,4): {Furniture/Digital}\n[LINKS] Zone_A <-> Zone B via R2-R3. Zone_B <-> Zone A via R5-R6\n[TRACE] Key: A(R1)->A(R1).",
+    "clustered_25": "G1(1,5):1,6,7,2. G2(6,4):5,8,3,4. Links:G1-G2(2-3),G1-G2(2-5),G2-G1(5-6),G1-G2(7-8). Key:A>A."
+  }
+}

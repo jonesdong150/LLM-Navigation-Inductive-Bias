@@ -1,0 +1,51 @@
+question_id,task_type,question_text,answer_format,ground_truth
+q01,ObjectLocation,Where is the Light currently located?,ROOM_ID,R1
+q02,ObjectLocation,Where is the Phone currently located?,ROOM_ID,R2
+q03,ObjectLocation,Where is the Tablet currently located?,ROOM_ID,R3
+q04,ObjectLocation,Where is the Drill currently located?,ROOM_ID,R4
+q05,ObjectLocation,Where is the Server currently located?,ROOM_ID,R5
+q06,ObjectLocation,Where is the Gate currently located?,ROOM_ID,R6
+q07,ObjectLocation,Where is the Kindle currently located?,ROOM_ID,R7
+q08,ObjectLocation,Where is the Router currently located?,ROOM_ID,R8
+q09,ObjectLocation,Where is the Tape currently located?,ROOM_ID,R9
+q10,ObjectLocation,Where is the Printer currently located?,ROOM_ID,R10
+q11,GeometryYN,Is the Library (R3) located North the Office (R10)?,YES_NO,YES
+q12,GeometryYN,Is the Lounge (R1) located at the same latitude as the Library (R3)?,YES_NO,NO
+q13,GeometryYN,Is the Workshop (R6) located North the Library (R9)?,YES_NO,YES
+q14,GeometryYN,Is the Workshop (R12) located South the Workshop (R6)?,YES_NO,YES
+q15,GeometryYN,Is the Office (R10) located South the Studio (R5)?,YES_NO,YES
+q16,GeometryYN,Is the Office (R10) located at the same latitude as the Library (R9)?,YES_NO,NO
+q17,GeometryYN,Is the Studio (R5) located South the Library (R3)?,YES_NO,YES
+q18,GeometryYN,Is the Library (R3) located North the MeetingRoom (R8)?,YES_NO,YES
+q19,GeometryYN,Is the Lounge (R1) located at the same latitude as the Library (R3)?,YES_NO,NO
+q20,GeometryYN,Is the Workshop (R12) located South the Workshop (R6)?,YES_NO,YES
+q21,TopologyYN,Is there a direct connection between R5 and R7?,YES_NO,NO
+q22,TopologyYN,Is there a direct connection between R12 and R10?,YES_NO,NO
+q23,TopologyYN,Is there a direct connection between R8 and R2?,YES_NO,NO
+q24,TopologyYN,Is there a direct connection between R1 and R10?,YES_NO,NO
+q25,TopologyYN,Is there a direct connection between R12 and R11?,YES_NO,YES
+q26,TopologyYN,Is there a direct connection between R5 and R9?,YES_NO,NO
+q27,TopologyYN,Is there a direct connection between R1 and R9?,YES_NO,NO
+q28,TopologyYN,Is there a direct connection between R7 and R12?,YES_NO,NO
+q29,TopologyYN,Is there a direct connection between R10 and R6?,YES_NO,NO
+q30,TopologyYN,Is there a direct connection between R9 and R5?,YES_NO,NO
+q31,ReachabilityYN,Can you reach R12 from R8?,YES_NO,YES
+q32,ReachabilityYN,Can you reach R7 from R2?,YES_NO,YES
+q33,ReachabilityYN,Can you reach R4 from R10?,YES_NO,YES
+q34,ReachabilityYN,Can you reach R1 from R8?,YES_NO,YES
+q35,ReachabilityYN,Can you reach R9 from R3?,YES_NO,YES
+q36,ReachabilityYN,Can you reach R6 from R5?,YES_NO,YES
+q37,ReachabilityYN,Can you reach R7 from R12?,YES_NO,YES
+q38,ReachabilityYN,Can you reach R3 from R11?,YES_NO,YES
+q39,ReachabilityYN,Can you reach R8 from R5?,YES_NO,YES
+q40,ReachabilityYN,Can you reach R4 from R1?,YES_NO,YES
+q41,PathGen,Provide the shortest path from R5 to R9.,PATH,R5->R6->R7->R8->R9
+q42,PathGen,Provide the shortest path from R5 to R2.,PATH,R5->R4->R3->R2
+q43,PathGen,Provide the shortest path from R9 to R4.,PATH,R9->R8->R7->R2->R3->R4
+q44,PathGen,Provide the shortest path from R8 to R7.,PATH,R8->R7
+q45,PathGen,Provide the shortest path from R3 to R4.,PATH,R3->R4
+q46,PathGen,Provide the shortest path from R2 to R5.,PATH,R2->R3->R4->R5
+q47,PathGen,Provide the shortest path from R11 to R3.,PATH,R11->R6->R3
+q48,PathGen,Provide the shortest path from R1 to R10.,PATH,R1->R8->R7->R10
+q49,PathGen,Provide the shortest path from R12 to R1.,PATH,R12->R5->R6->R7->R8->R1
+q50,PathGen,Provide the shortest path from R9 to R2.,PATH,R9->R8->R7->R2

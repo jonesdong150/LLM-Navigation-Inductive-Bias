@@ -1,0 +1,1 @@
+{scene_text}; Now, the question you need to answer is: "{query_text}". Your output must strictly follow this format: "Answer: <your answer>". And, the specific requirements for your output are as follows: 1. Your Task Type is "{task_type}", so your Answer Format must be {answer_format}. {strict_format_rules}

@@ -1,0 +1,496 @@
+{
+  "scene_id": "scene_complex_05",
+  "description": "Complex scene 05: G3 - Complex modeling (10 rooms)",
+  "world": {
+    "scene_name": "scene_complex_05",
+    "gradient": "G3",
+    "gradient_label": "Complex modeling",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "type": "Studio",
+        "x": 0,
+        "y": 12
+      },
+      {
+        "idx": 1,
+        "room_id": "R2",
+        "type": "Library",
+        "x": 4,
+        "y": 12
+      },
+      {
+        "idx": 2,
+        "room_id": "R3",
+        "type": "Kitchen",
+        "x": 8,
+        "y": 12
+      },
+      {
+        "idx": 3,
+        "room_id": "R4",
+        "type": "Workshop",
+        "x": 12,
+        "y": 12
+      },
+      {
+        "idx": 4,
+        "room_id": "R5",
+        "type": "Corridor",
+        "x": 12,
+        "y": 8
+      },
+      {
+        "idx": 5,
+        "room_id": "R6",
+        "type": "Studio",
+        "x": 8,
+        "y": 8
+      },
+      {
+        "idx": 6,
+        "room_id": "R7",
+        "type": "Library",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "idx": 7,
+        "room_id": "R8",
+        "type": "Kitchen",
+        "x": 0,
+        "y": 8
+      },
+      {
+        "idx": 8,
+        "room_id": "R9",
+        "type": "Workshop",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "idx": 9,
+        "room_id": "R10",
+        "type": "Corridor",
+        "x": 4,
+        "y": 4
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "objects": {
+      "0": [
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Furniture",
+          "Bench"
+        ]
+      ],
+      "1": [
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ],
+        [
+          "Storage",
+          "Crate"
+        ],
+        [
+          "Storage",
+          "Rack"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ]
+      ],
+      "2": [
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Storage",
+          "Rack"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ]
+      ],
+      "3": [
+        [
+          "Storage",
+          "Safe"
+        ],
+        [
+          "Furniture",
+          "Chair"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ]
+      ],
+      "4": [
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Storage",
+          "Drawer"
+        ]
+      ],
+      "5": [
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Storage",
+          "Crate"
+        ],
+        [
+          "Security",
+          "Light"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Digital",
+          "Stylus"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Storage",
+          "Crate"
+        ]
+      ],
+      "6": [
+        [
+          "Digital",
+          "Phone"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Storage",
+          "Safe"
+        ],
+        [
+          "Security",
+          "BadgeReader"
+        ],
+        [
+          "Security",
+          "Alarm"
+        ],
+        [
+          "Digital",
+          "Microphone"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Storage",
+          "FileCabinet"
+        ]
+      ],
+      "7": [
+        [
+          "Digital",
+          "Projector"
+        ],
+        [
+          "Storage",
+          "Box"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Security",
+          "Camera"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "Storage",
+          "FileCabinet"
+        ],
+        [
+          "Storage",
+          "Locker"
+        ],
+        [
+          "Security",
+          "Lock"
+        ]
+      ],
+      "8": [
+        [
+          "Storage",
+          "Drawer"
+        ],
+        [
+          "Security",
+          "Gate"
+        ],
+        [
+          "Storage",
+          "Rack"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ]
+      ],
+      "9": [
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Digital",
+          "Speaker"
+        ],
+        [
+          "Furniture",
+          "Table"
+        ],
+        [
+          "Furniture",
+          "Shelf"
+        ],
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Security",
+          "Sensor"
+        ],
+        [
+          "Digital",
+          "Mixer"
+        ],
+        [
+          "Furniture",
+          "Desk"
+        ]
+      ]
+    },
+    "history": [
+      0,
+      1,
+      6,
+      9,
+      6,
+      7,
+      8
+    ],
+    "rules": [
+      "When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.",
+      "Do not repeat a room in the path unless necessary.",
+      "If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence."
+    ]
+  },
+  "variants": {
+    "flat_full": "You are in the scene 'scene_complex_05'.\nRooms and coordinates:\n- R1 (Studio) @ (0,12)\n  Objects: Furniture:Chair, Storage:Box, Security:Gate, Furniture:Sofa, Digital:Speaker, Furniture:Cabinet, Security:Alarm, Furniture:Bench\n- R2 (Library) @ (4,12)\n  Objects: Digital:Microphone, Storage:Box, Security:Alarm, Digital:Phone, Furniture:Desk, Storage:Crate, Storage:Rack, Furniture:Shelf\n- R3 (Kitchen) @ (8,12)\n  Objects: Security:Light, Storage:Rack, Security:BadgeReader, Furniture:Shelf, Security:Gate, Furniture:Sofa, Digital:Stylus, Digital:Microphone\n- R4 (Workshop) @ (12,12)\n  Objects: Storage:Safe, Furniture:Chair, Digital:Speaker, Security:BadgeReader, Storage:Locker, Security:Light, Furniture:Desk, Furniture:Desk\n- R5 (Corridor) @ (12,8)\n  Objects: Digital:Mixer, Digital:Phone, Storage:Locker, Security:Sensor, Digital:Microphone, Security:Light, Digital:Projector, Storage:Drawer\n- R6 (Studio) @ (8,8)\n  Objects: Digital:Microphone, Furniture:Table, Storage:Crate, Security:Light, Furniture:Shelf, Digital:Stylus, Security:BadgeReader, Storage:Crate\n- R7 (Library) @ (4,8)\n  Objects: Digital:Phone, Security:BadgeReader, Storage:Safe, Security:BadgeReader, Security:Alarm, Digital:Microphone, Digital:Mixer, Storage:FileCabinet\n- R8 (Kitchen) @ (0,8)\n  Objects: Digital:Projector, Storage:Box, Furniture:Cabinet, Security:Camera, Security:Sensor, Storage:FileCabinet, Storage:Locker, Security:Lock\n- R9 (Workshop) @ (0,4)\n  Objects: Storage:Drawer, Security:Gate, Storage:Rack, Furniture:Cabinet, Furniture:Cabinet, Furniture:Shelf, Furniture:Sofa, Furniture:Shelf\n- R10 (Corridor) @ (4,4)\n  Objects: Digital:Speaker, Digital:Speaker, Furniture:Table, Furniture:Shelf, Furniture:Cabinet, Security:Sensor, Digital:Mixer, Furniture:Desk\nTopology edges: R1-R2, R1-R8, R2-R7, R3-R4, R3-R6, R4-R5, R5-R6, R6-R7, R7-R8, R7-R10, R8-R9.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R10(t4) -> R7(t5) -> R8(t6) -> R9(t7).\nRules/constraints:\n- When generating a path, output the shortest valid path under the implied connectivity unless the question specifies otherwise.\n- Do not repeat a room in the path unless necessary.\n- If multiple shortest paths exist, choose the lexicographically smallest by room ID sequence.",
+    "flat_topo_hist": "You are given a set of room IDs and how they connect (topology).\nRooms: R1, R2, R3, R4, R5, R6, R7, R8, R9, R10.\nTopology edges: R1-R2, R1-R8, R2-R7, R3-R4, R3-R6, R4-R5, R5-R6, R6-R7, R7-R8, R7-R10, R8-R9.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R10(t4) -> R7(t5) -> R8(t6) -> R9(t7).\nConstraint: When generating a path, output the shortest valid path unless the question specifies otherwise.",
+    "flat_geom_rule_hist": "You are given room coordinates. You must infer connectivity using the rules below.\nRooms and coordinates:\n- R1 @ (0,12)\n- R2 @ (4,12)\n- R3 @ (8,12)\n- R4 @ (12,12)\n- R5 @ (12,8)\n- R6 @ (8,8)\n- R7 @ (4,8)\n- R8 @ (0,8)\n- R9 @ (0,4)\n- R10 @ (4,4)\nRules:\n- Two rooms are connected by a door iff their Manhattan distance is exactly 4.\n- You may assume there are no blocked doors unless the text explicitly says so.\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R10(t4) -> R7(t5) -> R8(t6) -> R9(t7).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat_sem_rule_hist": "You are given room semantics and room contents. Connectivity is defined by semantic rules below.\nRooms and semantics:\n- R1 is a 'Studio'. Objects: Furniture:Chair, Storage:Box, Security:Gate, Furniture:Sofa, Digital:Speaker, Furniture:Cabinet, Security:Alarm, Furniture:Bench\n- R2 is a 'Library'. Objects: Digital:Microphone, Storage:Box, Security:Alarm, Digital:Phone, Furniture:Desk, Storage:Crate, Storage:Rack, Furniture:Shelf\n- R3 is a 'Kitchen'. Objects: Security:Light, Storage:Rack, Security:BadgeReader, Furniture:Shelf, Security:Gate, Furniture:Sofa, Digital:Stylus, Digital:Microphone\n- R4 is a 'Workshop'. Objects: Storage:Safe, Furniture:Chair, Digital:Speaker, Security:BadgeReader, Storage:Locker, Security:Light, Furniture:Desk, Furniture:Desk\n- R5 is a 'Corridor'. Objects: Digital:Mixer, Digital:Phone, Storage:Locker, Security:Sensor, Digital:Microphone, Security:Light, Digital:Projector, Storage:Drawer\n- R6 is a 'Studio'. Objects: Digital:Microphone, Furniture:Table, Storage:Crate, Security:Light, Furniture:Shelf, Digital:Stylus, Security:BadgeReader, Storage:Crate\n- R7 is a 'Library'. Objects: Digital:Phone, Security:BadgeReader, Storage:Safe, Security:BadgeReader, Security:Alarm, Digital:Microphone, Digital:Mixer, Storage:FileCabinet\n- R8 is a 'Kitchen'. Objects: Digital:Projector, Storage:Box, Furniture:Cabinet, Security:Camera, Security:Sensor, Storage:FileCabinet, Storage:Locker, Security:Lock\n- R9 is a 'Workshop'. Objects: Storage:Drawer, Security:Gate, Storage:Rack, Furniture:Cabinet, Furniture:Cabinet, Furniture:Shelf, Furniture:Sofa, Furniture:Shelf\n- R10 is a 'Corridor'. Objects: Digital:Speaker, Digital:Speaker, Furniture:Table, Furniture:Shelf, Furniture:Cabinet, Security:Sensor, Digital:Mixer, Furniture:Desk\nSemantic connectivity rules (room-chain):\n- The scene provides an ordered chain of rooms. Two rooms are connected iff they are adjacent in this chain.\n- Room chain: R1 -> R2 -> R3 -> R4 -> R5 -> R6 -> R7 -> R8 -> R9 -> R10\n- The chain is the ONLY source of connectivity (do not assume any other connections).\nHistory of Master_Key: Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R10(t4) -> R7(t5) -> R8(t6) -> R9(t7).\nConstraint: Prefer the shortest path under the inferred connectivity.",
+    "flat": "You are in a shopping mall. You start at the Studio (R1), located at (0,12), which contains Chair, Box, Gate, Sofa, Speaker, Cabinet, Alarm, and a Bench. Moving East from the Studio (R1), you enter the Library (R2) at (4,12), which contains Microphone, Box, Alarm, Phone, Desk, Crate, Rack, and a Shelf. There is also the Kitchen (R3) at (8,12), which contains Light, Rack, BadgeReader, Shelf, Gate, Sofa, Stylus, and a Microphone. Moving East from the Kitchen (R3), you enter the Workshop (R4) at (12,12), which contains Safe, Chair, Speaker, BadgeReader, Locker, Light, Desk, and a Desk. Moving South from the Workshop (R4), you enter the Corridor (R5) at (12,8), which contains Mixer, Phone, Locker, Sensor, Microphone, Light, Projector, and a Drawer. Moving South from the Kitchen (R3), you enter the Studio (R6) at (8,8), which contains Microphone, Table, Crate, Light, Shelf, Stylus, BadgeReader, and a Crate. Moving South from the Library (R2), you enter the Library (R7) at (4,8), which contains Phone, BadgeReader, Safe, BadgeReader, Alarm, Microphone, Mixer, and a FileCabinet. Moving South from the Studio (R1), you enter the Kitchen (R8) at (0,8), which contains Projector, Box, Cabinet, Camera, Sensor, FileCabinet, Locker, and a Lock. Moving South from the Kitchen (R8), you enter the Workshop (R9) at (0,4), which contains Drawer, Gate, Rack, Cabinet, Cabinet, Shelf, Sofa, and a Shelf. Moving South from the Library (R7), you enter the Corridor (R10) at (4,4), which contains Speaker, Speaker, Table, Shelf, Cabinet, Sensor, Mixer, and a Desk. Interestingly, the Studio features a connection back to the Kitchen and the Library features a connection back to the Library. At t1, a 'Master_Key' was in the Studio (R1). At t2, it was picked up and moved to the Library (R2). At t3, it was picked up and moved to the Library (R7). At t4, it was picked up and moved to the Corridor (R10). At t5, it was picked up and moved to the Library (R7). At t6, it was picked up and moved to the Kitchen (R8). At t7, it was picked up and moved to the Workshop (R9).",
+    "hier": "[SCENE: shopping mall]\n- [ROOM R1: Studio @ (0,12)]\n  - [Objects: Furniture(Chair, Sofa, Cabinet, Bench), Storage(Box), Security(Gate, Alarm), Digital(Speaker)]\n- [ROOM R2: Library @ (4,12)]\n  - [Objects: Digital(Microphone, Phone), Storage(Box, Crate, Rack), Security(Alarm), Furniture(Desk, Shelf)]\n- [ROOM R3: Kitchen @ (8,12)]\n  - [Objects: Security(Light, BadgeReader, Gate), Storage(Rack), Furniture(Shelf, Sofa), Digital(Stylus, Microphone)]\n- [ROOM R4: Workshop @ (12,12)]\n  - [Objects: Storage(Safe, Locker), Furniture(Chair, Desk, Desk), Digital(Speaker), Security(BadgeReader, Light)]\n- [ROOM R5: Corridor @ (12,8)]\n  - [Objects: Digital(Mixer, Phone, Microphone, Projector), Storage(Locker, Drawer), Security(Sensor, Light)]\n- [ROOM R6: Studio @ (8,8)]\n  - [Objects: Digital(Microphone, Stylus), Furniture(Table, Shelf), Storage(Crate, Crate), Security(Light, BadgeReader)]\n- [ROOM R7: Library @ (4,8)]\n  - [Objects: Digital(Phone, Microphone, Mixer), Security(BadgeReader, BadgeReader, Alarm), Storage(Safe, FileCabinet)]\n- [ROOM R8: Kitchen @ (0,8)]\n  - [Objects: Digital(Projector), Storage(Box, FileCabinet, Locker), Furniture(Cabinet), Security(Camera, Sensor, Lock)]\n- [ROOM R9: Workshop @ (0,4)]\n  - [Objects: Storage(Drawer, Rack), Security(Gate), Furniture(Cabinet, Cabinet, Shelf, Sofa, Shelf)]\n- [ROOM R10: Corridor @ (4,4)]\n  - [Objects: Digital(Speaker, Speaker, Mixer), Furniture(Table, Shelf, Cabinet, Desk), Security(Sensor)]\n\n[TOPOLOGY] R1-R2, R1-R8, R2-R7, R3-R4, R3-R6, R4-R5, R5-R6, R6-R7, R7-R8, R7-R10, R8-R9\n[HISTORY] Master_Key: R1(t1) -> R2(t2) -> R7(t3) -> R10(t4) -> R7(t5) -> R8(t6) -> R9(t7)",
+    "hier_50": "[HIERARCHY]\nScene(05) -> R1,R2,R3,R4,R5,R6,R7,R8,R9,R10\nR1(0,12): {Fur:Cha, Sto:Box, Sec:Gat, Fur:Sof}\nR2(4,12): {Dig:Mic, Sto:Box, Sec:Ala, Dig:Pho}\nR3(8,12): {Sec:Lig, Sto:Rac, Sec:Bad, Fur:She}\nR4(12,12): {Sto:Saf, Fur:Cha, Dig:Spe, Sec:Bad}\nR5(12,8): {Dig:Mix, Dig:Pho, Sto:Loc, Sec:Sen}\nR6(8,8): {Dig:Mic, Fur:Tab, Sto:Cra, Sec:Lig}\nR7(4,8): {Dig:Pho, Sec:Bad, Sto:Saf, Sec:Bad}\nR8(0,8): {Dig:Pro, Sto:Box, Fur:Cab, Sec:Cam}\nR9(0,4): {Sto:Dra, Sec:Gat, Sto:Rac, Fur:Cab}\nR10(4,4): {Dig:Spe, Dig:Spe, Fur:Tab, Fur:She}\nEdges: R1-R2,R1-R8,R2-R7,R3-R4,R3-R6,R4-R5,R5-R6,R6-R7,R7-R8,R7-R10,R8-R9\nPath: Key@R1>R2>R7>R10>R7>R8>R9",
+    "hier_25": "05[R1(0,12):{Fur, Sto, Sec}; R2(4,12):{Dig, Sto, Sec}; R3(8,12):{Sec, Sto, Sec}; R4(12,12):{Sto, Fur, Dig}; R5(12,8):{Dig, Dig, Sto}; R6(8,8):{Dig, Fur, Sto}; R7(4,8):{Dig, Sec, Sto}; R8(0,8):{Dig, Sto, Fur}; R9(0,4):{Sto, Sec, Sto}; R10(4,4):{Dig, Dig, Fur}]. Edges:1-2,1-8,2-7,3-4,3-6,4-5,5-6,6-7,7-8,7-10,8-9. Key:1>2>7>10>7>8>9.",
+    "clustered": "[SCENE: shopping mall]\n- [ZONE A: R1, R8, R9, R2, R7]\n  - [R1, R8, R9, R2, R7 Objects]: {Security, Furniture, Digital, Storage}\n- [ZONE B: R10, R3, R6, R4, R5]\n  - [R10, R3, R6, R4, R5 Objects]: {Furniture, Digital, Storage, Security}\n\n[GEOMETRY] A_Center: (1.6, 8.8) | B_Center: (8.8, 8.8)\n[CONNECTIVITY] Zone_B <-> Zone A via R6-R7. Zone_A <-> Zone B via R7-R10. Loop in Zone_A\n[HISTORY] Master_Key: Zone_A(R1) -> Zone_A(R9)",
+    "clustered_50": "[CLUSTERS]\nA_Zone(R1,R8,R9,R2,R7) @(2,9): {Security/Furniture}\nB_Zone(R10,R3,R6,R4,R5) @(9,9): {Furniture/Digital}\n[LINKS] Zone_B <-> Zone A via R6-R7. Zone_A <-> Zone B via R7-R10. Loop in Zone_A\n[TRACE] Key: A(R1)->A(R9).",
+    "clustered_25": "G1(2,9):1,8,9,2,7. G2(9,9):10,3,6,4,5. Links:G2-G1(6-7),G1-G2(7-10). Key:A>A."
+  }
+}

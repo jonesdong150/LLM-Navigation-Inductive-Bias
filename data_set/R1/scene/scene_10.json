@@ -1,0 +1,138 @@
+{
+  "scene_id": "scene_simple_10",
+  "description": "Simple navigation scene 10 (5 rooms)",
+  "world": {
+    "scene_name": "scene_simple_10",
+    "gradient": "G1",
+    "gradient_label": "Simple navigation",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "type": "Entrance",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "idx": 1,
+        "room_id": "R2",
+        "type": "Kitchen",
+        "x": 4,
+        "y": 0
+      },
+      {
+        "idx": 2,
+        "room_id": "R3",
+        "type": "Living Room",
+        "x": 8,
+        "y": 0
+      },
+      {
+        "idx": 3,
+        "room_id": "R4",
+        "type": "Bedroom",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "idx": 4,
+        "room_id": "R5",
+        "type": "Bathroom",
+        "x": 4,
+        "y": 4
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "objects": {
+      "0": [
+        [
+          "Appliance",
+          "Microwave"
+        ],
+        [
+          "Appliance",
+          "Microwave"
+        ]
+      ],
+      "1": [
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Furniture",
+          "Fridge"
+        ]
+      ],
+      "2": [
+        [
+          "Storage",
+          "Wardrobe"
+        ],
+        [
+          "Storage",
+          "Wardrobe"
+        ]
+      ],
+      "3": [
+        [
+          "Furniture",
+          "Cabinet"
+        ],
+        [
+          "Furniture",
+          "Sofa"
+        ]
+      ],
+      "4": [
+        [
+          "Appliance",
+          "Cabinet"
+        ],
+        [
+          "Appliance",
+          "Wardrobe"
+        ]
+      ]
+    },
+    "history": [
+      0,
+      1,
+      2
+    ],
+    "rules": [
+      "When generating a path, output the shortest valid path under the implied connectivity.",
+      "Do not repeat a room in the path unless necessary."
+    ]
+  },
+  "variants": {
+    "flat": "You are in a building. You start at the Entrance (R1), located at (0,0), which contains a Microwave and a Microwave. Moving East from the Entrance (R1), you enter the Kitchen (R2) at (4,0), which contains a Cabinet and a Fridge. Moving East from the Kitchen (R2), you enter the Living Room (R3) at (8,0), which contains a Wardrobe and a Wardrobe. Moving West from the Living Room (R3), you enter the Bedroom (R4) at (0,4), which contains a Cabinet and a Sofa. Moving East from the Bedroom (R4), you enter the Bathroom (R5) at (4,4), which contains a Cabinet and a Wardrobe. Interestingly, the Bathroom features a connection back to the Entrance. At t1, a 'Master_Key' was in the Entrance (R1). At t2, it was picked up and moved to the Kitchen (R2). At t3, it was picked up and moved to the Living Room (R3).",
+    "hier": "[SCENE: building]\n- [ROOM R1: Entrance @ (0,0)]\n  - [Objects: Appliance(Microwave, Microwave)]\n- [ROOM R2: Kitchen @ (4,0)]\n  - [Objects: Furniture(Cabinet, Fridge)]\n- [ROOM R3: Living Room @ (8,0)]\n  - [Objects: Storage(Wardrobe, Wardrobe)]\n- [ROOM R4: Bedroom @ (0,4)]\n  - [Objects: Furniture(Cabinet, Sofa)]\n- [ROOM R5: Bathroom @ (4,4)]\n  - [Objects: Appliance(Cabinet, Wardrobe)]\n\n[TOPOLOGY] R1-R2, R2-R3, R3-R4, R4-R5, R5-R1\n[HISTORY] Master_Key: R1(t1) -> R2(t2) -> R3(t3)",
+    "hier_50": "[HIERARCHY]\nScene(Home10) -> R1,R2,R3,R4,R5\nR1(0,0): {App:Mic, App:Mic}\nR2(4,0): {Fur:Cab, Fur:Fri}\nR3(8,0): {Sto:War, Sto:War}\nR4(0,4): {Fur:Cab, Fur:Sof}\nR5(4,4): {App:Cab, App:War}\nEdges: R1-R2,R2-R3,R3-R4,R4-R5,R5-R1\nPath: Key@R1>R2>R3",
+    "hier_25": "H10[R1(0,0):{App, App}; R2(4,0):{Fur, Fur}; R3(8,0):{Sto, Sto}; R4(0,4):{Fur, Fur}; R5(4,4):{App, App}]. Edges:1-2,2-3,3-4,4-5,5-1. Key:1>2>3.",
+    "clustered": "[SCENE: building]\n- [ZONE A: R1, R4]\n  - [R1, R4 Objects]: {Furniture, Appliance}\n- [ZONE B: R2, R5, R3]\n  - [R2, R5, R3 Objects]: {Furniture, Appliance, Storage}\n\n[GEOMETRY] A_Center: (0.0, 2.0) | B_Center: (5.3, 1.3)\n[CONNECTIVITY] Zone_A <-> Zone B via R1-R2. Zone_B <-> Zone A via R3-R4\n[HISTORY] Master_Key: Zone_A(R1) -> Zone_B(R3)",
+    "clustered_50": "[CLUSTERS]\nA_Zone(R1,R4) @(0,2): {Furniture/Appliance}\nB_Zone(R2,R5,R3) @(5,1): {Furniture/Appliance}\n[LINKS] Zone_A <-> Zone B via R1-R2. Zone_B <-> Zone A via R3-R4\n[TRACE] Key: A(R1)->B(R3).",
+    "clustered_25": "G1(0,2):1,4. G2(5,1):2,5,3. Links:G1-G2(1-2),G2-G1(3-4),G1-G2(4-5),G2-G1(5-1). Key:A>B."
+  }
+}
