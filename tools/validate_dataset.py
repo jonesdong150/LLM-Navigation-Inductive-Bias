@@ -22,13 +22,17 @@ from collections import defaultdict
 # Expected datasets
 DATASETS = ["R1", "R2", "conflict"]
 
-# Dataset-specific expected variants
+# Dataset-specific expected variants (core variants; semantic variants are optional)
 EXPECTED_VARIANTS_MAP = {
-    "R1": ["flat", "hier", "hier_50", "hier_25", "clustered", "clustered_50", "clustered_25"],
+    "R1": ["flat", "flat_50", "flat_25",
+           "hier", "hier_50", "hier_25",
+           "clustered", "clustered_50", "clustered_25"],
     "R2": ["flat_full", "flat_topo_hist", "flat_geom_rule_hist", "flat_sem_rule_hist",
-           "flat", "hier", "hier_50", "hier_25", "clustered", "clustered_50", "clustered_25"],
+           "flat", "flat_50", "flat_25",
+           "hier", "hier_50", "hier_25",
+           "clustered", "clustered_50", "clustered_25"],
     "conflict": ["flat_full", "flat_topo_hist", "flat_geom_rule_hist", "flat_sem_rule_hist",
-                 "conflict_topo", "conflict_geom", "conflict_sem"],
+                 "conflict_flat", "conflict_hier", "conflict_clustered"],
 }
 
 # Required world structure fields
@@ -152,14 +156,14 @@ def check_information_equivalence(scene_path: str) -> Dict:
             rid in variant_text or str(i + 1) in variant_text
             for i, rid in enumerate(room_ids)
         )
-        history_ok = (
-            len(history) > 0 and
-            any(
-                (room_ids[h] in variant_text if h < len(room_ids) else False) or
-                (str(h + 1) in variant_text if h < len(room_ids) else False)
+        # History is now a list of dicts with "from_room" and "to_room" fields
+        history_ok = True
+        if history:
+            history_ok = any(
+                (h.get("from_room", "") in variant_text or
+                 h.get("to_room", "") in variant_text)
                 for h in history
             )
-        )
         topo_ok = (
             len(edges) == 0 or
             any(

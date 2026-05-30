@@ -1,259 +1,264 @@
 # Dataset Documentation
 
-This document provides detailed information about the dataset structure, generation process, and validation methods.
+Detailed information about the dataset structure, format variants, and query types.
 
-## 📋 Dataset Overview
+## Overview
 
-### Total Scale
-- **Total Scenes**: 25
-  - R1 (Simple): 10 scenes
-  - R2 (Complex): 10 scenes
-  - conflict (Conflict): 5 scenes
-- **Total Queries**: 1,250
-- **Format Variants**: 7 per scene
-- **Total Samples**: 57,500+
+| Dataset | Scenes | Rooms | Queries/Scene | Total Queries | Variants/Scene |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| **R1** (Simple) | 10 | 4-6 | 50 | 500 | 18 |
+| **R2** (Complex) | 10 | 6-14 | 50 | 500 | 22 |
+| **Conflict** | 10 | 6-14 | 50 | 500 | 7 |
+| **Total** | **30** | | | **1,500** | |
 
-### Generation Method
+**Generation method**: Fully automated, rule-based, deterministic. No human annotation or LLM-based annotation.
 
-**Key Principle**: The dataset is generated through **fully automated, rule-based serialization** with:
-- ✅ No human annotation
-- ✅ No LLM-based annotation
-- ✅ Deterministic generation (seed-controlled)
-- ✅ Information equivalence guarantee
-
-## 🏗️ Scene Structure
-
-### World Representation
-
-Each scene contains a structured `world` object:
+## Scene JSON Schema
 
 ```json
 {
-  "scene_name": "scene_complex_01",
-  "gradient": "G1",
-  "gradient_label": "Basic cognition",
-  "rooms": [
-    {
-      "idx": 0,
-      "room_id": "R1",
-      "type": "Reception",
-      "x": 0,
-      "y": 0
-    }
-  ],
-  "edges": [[0, 1], [1, 2]],
-  "objects": {
-    "0": [["Furniture", "Table"], ["IT", "Monitor"]]
+  "scene_id": "scene_complex_01",
+  "description": "Complex scene 01: G1 - Basic cognition (6 rooms)",
+  "world": {
+    "scene_name": "scene_complex_01",
+    "gradient": "G1",
+    "gradient_label": "Basic cognition",
+    "rooms": [
+      {
+        "idx": 0,
+        "room_id": "R1",
+        "canonical": "Library",
+        "synonyms": ["Reading Room", "Archive"],
+        "abbr": "Lib",
+        "attributes": ["Bright"],
+        "x": 0, "y": 0, "w": 4, "h": 4
+      }
+    ],
+    "edges": [[0, 1], [1, 2]],
+    "objects": {
+      "0": [
+        {
+          "obj_id": "O1",
+          "canonical": "Printer",
+          "synonyms": ["Scanner", "Copier"],
+          "abbr": "Prn",
+          "attributes": ["Large"],
+          "name": "Printer_1",
+          "display_name": "Printer"
+        }
+      ]
+    },
+    "history": [
+      {"object": "Key", "from_room": "R1", "to_room": "R2"}
+    ],
+    "containment": {"Printer_1": "R1"},
+    "parallel_rooms": [["R1", "R2"]],
+    "parallel_objects": [],
+    "rules": ["When generating a path, output the shortest valid path..."]
   },
-  "history": [5, 2, 3],
-  "rules": [
-    "When generating a path, output the shortest valid path..."
-  ]
+  "variants": {
+    "flat": "Start at Bright Library R1(0,0). Large Printer...",
+    "flat_50": "...",
+    "flat_25": "Lib:R1(0,0)[Prn] | ...",
+    "hier": "[R1: Library [Bright] @ (0,0), Printer(Printer)]",
+    "hier_50": "...",
+    "hier_25": "...",
+    "clustered": "Zone A: {R1,R2} @ (2,0) ...",
+    "clustered_50": "...",
+    "clustered_25": "..."
+  }
 }
 ```
 
-### Room Properties
-- `idx`: Zero-based index
-- `room_id`: Human-readable ID (e.g., "R1", "R2")
-- `type`: Semantic type (e.g., "Reception", "Kitchen")
-- `x`, `y`: Geometric coordinates
+### Room Fields
 
-### Graph Properties
-- `edges`: List of [u, v] pairs representing door connections
-- `history`: Movement trace of a key object
-- `objects`: Room-wise object inventory
+| Field | Type | Description |
+|:---|:---|:---|
+| `idx` | int | Zero-based index |
+| `room_id` | str | Human-readable ID (R1, R2, ...) |
+| `canonical` | str | Canonical name from knowledge base |
+| `synonyms` | list[str] | At least 2 synonyms |
+| `abbr` | str | Abbreviation (e.g., "Lib") |
+| `attributes` | list[str] | Room attributes (e.g., "Bright", "Quiet") |
+| `x`, `y` | int | Grid coordinates |
+| `w`, `h` | int | Room dimensions |
 
-## 🔄 Format Variants
+### Object Fields
 
-### 1. Flat Format (`flat`)
+| Field | Type | Description |
+|:---|:---|:---|
+| `obj_id` | str | Object type ID (O1, O2, ...) |
+| `canonical` | str | Canonical name from knowledge base |
+| `synonyms` | list[str] | At least 2 synonyms |
+| `abbr` | str | Abbreviation |
+| `attributes` | list[str] | Object attributes (e.g., "Red", "Large") |
+| `name` | str | Instance name (e.g., "Printer_1") |
+| `display_name` | str | Display name (may differ from canonical) |
 
-Natural language narrative describing the scene:
+## Format Variants
 
-```
-You are in a smart campus. You start at the Reception (R1), located at (0,0),
-which features a sleek counter and a wooden bench...
-```
+### Structural Variants (R1, R2)
 
-**Characteristics**:
-- Human-readable prose
-- Information embedded in narrative flow
-- Suitable for natural language models
+Each scene has 9 structural variants: 3 formats x 3 retention levels.
 
-### 2. Hierarchical Format (`hier`, `hier_50`, `hier_25`)
-
-Structured representation with explicit hierarchy:
-
-```
-[SCENE: Smart Campus]
-- [ROOM R1: Reception @ (0,0)]
-  - [Objects: Furniture(Counter, Bench), IT(Server, Monitor)]
-...
-[TOPOLOGY] R1-R2, R2-R3, ...
-[HISTORY] Master_Key: R6(t1) -> R2(t2) -> R3(t3)
-```
-
-**Compression Levels**:
-- `hier` (0%): Full details
-- `hier_50` (50%): Abbreviated categories, truncated names
-- `hier_25` (75%): Maximum compression, numeric indices
-
-### 3. Clustered Format (`clustered`, `clustered_50`, `clustered_25`)
-
-Zone-based spatial clustering:
+#### Flat Format
 
 ```
-[SCENE: Smart Campus]
-- [ZONE A: Admin & Support (R1, R2, R6)]
-  - [R1, R2, R6 Objects]: {Furniture, IT, Storage, Security}
-- [ZONE B: Instructional (R3, R4, R5)]
-  - [R3, R4, R5 Objects]: {Instruments, Audio, Furniture}
-...
+100%: Start at Bright Library R1(0,0). Large Printer, Blue Scanner. Go east from R1 to Quiet Kitchen R2(4,0). Small Table. Before, the Key moved from R1 to R2.
+ 50%: Start at Bright Library R1(0,0). Large Printer, Blue Scanner. Go east from R1 to Quiet Kitchen R2(4,0). Small Table. Edges: R1-R2. Key moved: R1->R2
+ 25%: Lib:R1(0,0)[Prn,Mon] | Kit:R2(4,0)[Tbl] | Edg:1-2 | Key:R1->R2
 ```
 
-**Characteristics**:
-- Rooms grouped by spatial proximity
-- Zone-level summaries
-- Efficient for large scenes
+#### Hierarchical Format
 
-## 📊 Query Types
+```
+100%: [R1: Library [Bright] @ (0,0), Printer(Printer, Scanner)]
+      [R2: Kitchen [Quiet] @ (4,0), Table(Table)]
+      Topo: R1-R2
+      Hist: Key moved: R1->R2
+ 50%:  [HIERARCHY]
+       Scene(01) -> R1,R2
+       R1(0,0): Bright Library {Prn,Mon}
+       R2(4,0): Quiet Kitchen {Tbl}
+       Edges: R1-R2
+       Key: R1->R2
+ 25%:  C01[R1(0,0):Lib[Prn,Mon]; R2(4,0):Kit[Tbl]] | Edg:1-2 | Key:R1->R2
+```
+
+#### Clustered Format
+
+```
+100%: Zone A: {R1,R2} @ (2,0) Link: A<->B Key moved: R1->R2
+ 50%:  [CLUSTERS]
+       A(R1,R2) @(2,0): Bright {Prn/Mon/Tbl}
+       B(R3,R4) @(6,4): Quiet {Cab}
+       [LINKS] Zone_A <-> Zone_B via R2-R3
+       [TRACE] Key: R1->R4
+ 25%:  G1(2,0):1,2. G2(6,4):3,4. Links:G1-G2(2-3). Key:R1->R4.
+```
+
+### Dimension-Ablation Variants (R2)
+
+4 variants that selectively remove spatial dimensions:
+
+| Variant | Topology | Geometry | Semantics | History | Rules |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| `flat_full` | Y | Y | Y | Y | Y |
+| `flat_topo_hist` | Y | - | - | Y | - |
+| `flat_geom_rule_hist` | - | Y | - | Y | Y |
+| `flat_sem_rule_hist` | - | - | Y | Y | Y |
+
+### Semantic Variation Variants (R1, R2)
+
+9 variants where canonical names are replaced with synonyms from the knowledge base. Topology, geometry, and history remain unchanged.
+
+Example: "Library" -> "Reading Room", "Printer" -> "Scanner"
+
+### Conflict Variants (Conflict)
+
+| Variant | Description |
+|:---|:---|
+| `conflict_flat` | Flat format with duplicate labels for distinct rooms |
+| `conflict_hier` | Hierarchical format with duplicate labels |
+| `conflict_clustered` | Clustered format with duplicate labels |
+
+Semantic conflict (C2): Multiple distinct rooms share the same canonical label. IDs, topology, geometry, and history remain correct.
+
+## Query Types
 
 ### ObjectLocation
 ```
-Question: Where is the Master_Key currently located?
-Answer: R6
+Q: Where is the Printer currently located?
+A: R3
 ```
 
 ### GeometryYN
 ```
-Question: Is the Kitchen (R2) located North of the Entrance (R1)?
-Answer: YES
+Q: Is the Library (R1) located North the Kitchen (R2)?
+A: YES
 ```
 
 ### TopologyYN
 ```
-Question: Is there a direct connection between R1 and R3?
-Answer: NO
+Q: Is there a direct connection between R1 and R3?
+A: NO
 ```
 
 ### ReachabilityYN
 ```
-Question: Can you reach R3 from R1?
-Answer: YES
+Q: Can you reach R4 from R1?
+A: YES
 ```
 
 ### PathGen
 ```
-Question: Provide the shortest path from R1 to R3.
-Answer: R1->R2->R3
+Q: Provide the shortest path from R1 to R4.
+A: R1->R2->R3->R4
 ```
 
-## ✅ Information Equivalence Guarantee
+## Knowledge Base
 
-### Validation Criteria
+### Room Categories (12)
 
-All format variants must preserve:
+Each room has a canonical name, at least 2 synonyms, and an abbreviation.
 
-1. **Room Identity**: All `room_id` values appear in text
+| Canonical | Synonyms | Abbr |
+|:---|:---|:---|
+| Office | Workspace, Bureau | Off |
+| Corridor | Aisle, Hallway | Corr |
+| Meeting Room | Conference Room, Boardroom | MR |
+| Lobby | Entrance Hall, Foyer | Lob |
+| Bedroom | Sleeping Quarters, Chamber | Bed |
+| Kitchen | Pantry, Cookhouse | Kit |
+| Laboratory | Lab, Research Room | Lab |
+| Storage Room | Storeroom, Stockroom | Stor |
+| Bathroom | Restroom, Washroom | Bath |
+| Classroom | Lecture Room, Tutorial Room | CR |
+| Entrance | Entryway, Doorway | Ent |
+| Library | Reading Room, Archive | Lib |
+
+### Object Categories (10)
+
+| Canonical | Synonyms | Abbr |
+|:---|:---|:---|
+| Chair | Seat, Stool | Chr |
+| Desk | Table, Workbench | Dsk |
+| Laptop | Notebook Computer, PC | Lap |
+| Table | Counter, Bench | Tbl |
+| Sofa | Couch, Settee | Sof |
+| Key | Passkey, Access Card | Key |
+| Cabinet | Cupboard, Locker | Cab |
+| Printer | Scanner, Copier | Prn |
+| Monitor | Display, Screen | Mon |
+| Bookshelf | Shelf, Rack | Bks |
+
+### Attributes
+
+**Room attributes**: Bright, Dark, Messy, Clean, Quiet, Crowded, Spacious, Narrow
+
+**Object attributes**: Red, Blue, Large, Small, Heavy, Light, Wooden, Metallic
+
+## Information Equivalence
+
+All format variants encode the same underlying spatial truths:
+
+1. **Room identity**: All room IDs (or numeric indices) appear in every variant
 2. **Topology**: Connection information is encoded (explicitly or implicitly)
-3. **History**: Object movement trace is recoverable
+3. **History**: Object movement trace is preserved
 4. **Semantics**: Room types and objects are represented
 
-### Verification Script
+Verify with:
+```bash
+python tools/validate_dataset.py --base_dir ./data_set --check_equivalence
+```
+
+## Reproducibility
 
 ```bash
-python tools/validate_dataset.py --check_equivalence --verbose
-```
-
-Sample output:
-```
-[R1]
-  ✓ scene_01: All variants encode same information
-  ✓ scene_02: All variants encode same information
-...
-
-[R2]
-  ✓ scene_complex_01: All variants encode same information
-...
-```
-
-## 🔬 Reproducibility
-
-### Generation Pipeline
-
-```mermaid
-graph LR
-    A[World Definition] --> B[Scene Generator]
-    B --> C[Structure Validator]
-    C --> D[Serializer]
-    D --> E[Flat Format]
-    D --> F[Hierarchical Formats]
-    D --> G[Clustered Formats]
-    E --> H[Equivalence Checker]
-    F --> H
-    G --> H
-    H --> I[Final Dataset]
-```
-
-### Determinism
-
-```python
-# Generate identical dataset with same seed
+# Same seed -> identical dataset
 python tools/generate_dataset.py --seed 42
+
+# Verify determinism
+diff <(python tools/generate_dataset.py --seed 42 --output_dir /tmp/v1 2>&1) \
+     <(python tools/generate_dataset.py --seed 42 --output_dir /tmp/v2 2>&1)
 ```
-
-### Validation
-
-```python
-# Comprehensive validation
-python tools/validate_dataset.py \
-    --base_dir ./data_set \
-    --validate \
-    --check_equivalence \
-    --verbose
-```
-
-## 📈 Dataset Statistics
-
-| Metric | R1 | R2 | conflict | Total |
-|--------|----|----|-------|-------|
-| Scenes | 10 | 10 | 5 | 25 |
-| Queries | 500 | 500 | 250 | 1,250 |
-| Variants | 7 | 7 | 7 | 7 |
-| Total Samples | 3,500 | 3,500 | 1,750 | 8,750 |
-
-**Note**: With multiple configurations (L1-L4 prompt templates), total reaches **57,500** samples.
-
-## 🔧 Extending the Dataset
-
-### Adding New Scenes
-
-1. Create world definition in `data_set/YOUR_DATASET/scene/`
-2. Run generation script:
-```bash
-python tools/generate_dataset.py --output_dir ./data_set/YOUR_DATASET
-```
-
-### Adding New Query Types
-
-1. Extend `generate_queries_for_scene()` in `tools/generate_dataset.py`
-2. Add validation logic in `tools/validate_dataset.py`
-3. Update documentation
-
-## 📖 Citation
-
-```bibtex
-@dataset{navigation_planning_2025,
-  title={Navigation Planning Dataset for LLM Spatial Reasoning},
-  author={Research Team},
-  year={2025},
-  publisher={GitHub},
-  url={https://github.com/yourusername/navigation-planning-llm}
-}
-```
-
-## 📞 Support
-
-For questions about the dataset:
-- Open a GitHub issue
-- Check existing documentation
-- Contact maintainers

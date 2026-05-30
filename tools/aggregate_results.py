@@ -3,8 +3,8 @@
 """
 Aggregate raw evaluation results into final_stats CSV files.
 
-Reads per-scene summary JSONs from eval/ and produces the CSV files
-needed by the figure-generation scripts.
+Reads per-scene summary JSONs from eval/ and produces aggregated CSV files
+for statistical analysis.
 
 Usage:
     python tools/aggregate_results.py

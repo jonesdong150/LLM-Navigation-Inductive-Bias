@@ -3,54 +3,29 @@
 """
 Rule-based scene world generator for navigation planning experiments.
 
-Generates structured world data (rooms, edges, objects, history) for:
-- R1: Simple navigation scenes (4-6 rooms)
-- R2: Complex navigation scenes (6-14 rooms, G1-G5 gradients)
-- Conflict: Scenes with intentionally conflicting information cues
+Generates structured world data using the predefined knowledge base:
+- Rooms with canonical names, synonyms, abbreviations, and attributes
+- Objects with canonical names, synonyms, abbreviations, and attributes
+- Canonical scene graph with containment and parallel relations
+- Topology, geometry (x,y,w,h), and history
 
-This module ONLY generates world structure. All text serialization
-(format variants, dimension ablations, conflict rendering) is handled
-by scene_serializer.py.
-
-No human annotation or LLM-based annotation is used — generation is
-purely rule-based and deterministic given a seed.
+All scene elements are sampled from the knowledge base per the paper's
+specification. No human annotation or LLM-based annotation is used.
 """
 
 import math
 import random
 from typing import Dict, List, Tuple
 
-# -------------------------
-# Complexity schedule (10 scenes -> 5 gradients)
-# -------------------------
-GRADIENTS = {
-    "G1": {"rooms": 6,  "room_types": 3, "obj_per_room": 4,  "obj_types": 2, "history_steps": 2,  "label": "Basic cognition"},
-    "G2": {"rooms": 8,  "room_types": 4, "obj_per_room": 6,  "obj_types": 3, "history_steps": 4,  "label": "Intermediate planning"},
-    "G3": {"rooms": 10, "room_types": 5, "obj_per_room": 8,  "obj_types": 4, "history_steps": 6,  "label": "Complex modeling"},
-    "G4": {"rooms": 12, "room_types": 6, "obj_per_room": 10, "obj_types": 5, "history_steps": 8,  "label": "High-load retrieval"},
-    "G5": {"rooms": 14, "room_types": 7, "obj_per_room": 12, "obj_types": 6, "history_steps": 10, "label": "Extreme reasoning"},
-}
-
-# scene 1-2 => G1, 3-4 => G2, ..., 9-10 => G5
-SCENE_TO_G = {1: "G1", 2: "G1", 3: "G2", 4: "G2", 5: "G3",
-              6: "G3", 7: "G4", 8: "G4", 9: "G5", 10: "G5"}
-
-ROOM_TYPE_BANK = [
-    "Reception", "Corridor", "Office", "Library", "Kitchen", "Lab", "MeetingRoom",
-    "Storage", "Classroom", "Studio", "Bedroom", "Bathroom", "Lounge", "Workshop"
-]
-
-OBJ_TYPE_BANK = [
-    ("Furniture", ["Table", "Chair", "Bench", "Sofa", "Desk", "Shelf", "Cabinet"]),
-    ("IT", ["Server", "Monitor", "Router", "Laptop", "Tablet", "Scanner", "Printer"]),
-    ("Storage", ["Locker", "Rack", "Safe", "Box", "Drawer", "Crate", "FileCabinet"]),
-    ("Security", ["Camera", "Sensor", "Alarm", "BadgeReader", "Lock", "Gate", "Light"]),
-    ("Tools", ["Wrench", "Hammer", "Drill", "Screwdriver", "Cutter", "Tape", "Gloves"]),
-    ("Digital", ["Stylus", "Kindle", "Phone", "Projector", "Microphone", "Speaker", "Mixer"]),
-    ("Instruments", ["Piano", "Guitar", "Violin", "Drum", "Flute", "Amp", "Stool"]),
-]
+from tools.knowledge_base import (
+    GRADIENTS, SCENE_TO_G,
+    sample_rooms, sample_objects, sample_room_attrs, sample_object_attrs,
+    get_room_abbr, get_object_abbr,
+)
 
 GRID_STEP = 4
+ROOM_WIDTH = 4
+ROOM_HEIGHT = 4
 
 
 def manhattan(a: Tuple[int, int], b: Tuple[int, int]) -> int:
@@ -117,55 +92,76 @@ def build_edges_from_geometry(positions: List[Tuple[int, int]],
     return sorted(list(set(edges)))
 
 
-def sample_room_types(k: int, seed: int) -> List[str]:
-    random.seed(seed)
-    pool = ROOM_TYPE_BANK[:]
-    random.shuffle(pool)
-    return pool[:k]
-
-
-def sample_object_schema(obj_types: int, seed: int) -> List[Tuple[str, List[str]]]:
-    random.seed(seed)
-    pool = OBJ_TYPE_BANK[:]
-    random.shuffle(pool)
-    return pool[:obj_types]
-
-
 def assign_objects_to_rooms(n_rooms: int, obj_per_room: int,
-                            obj_schema: List, seed: int) -> Dict[int, List[Tuple[str, str]]]:
+                            obj_schema: List[Dict], seed: int,
+                            room_type_indices: List[int]) -> Dict[int, List[Dict]]:
+    """Assign objects from knowledge base to rooms with attributes.
+
+    Each object uses a different synonym from its category to ensure
+    meaningful grouping in the hier format (e.g., Printer(Scanner, Copier)).
+
+    Returns dict mapping room_idx -> list of object dicts with:
+      obj_id (e.g. "O1"), canonical, synonyms, abbr, attributes, name, display_name
+    """
     random.seed(seed)
     out = {}
+    obj_counter = {}
     for r in range(n_rooms):
         objs = []
-        for _ in range(obj_per_room):
-            cat, names = random.choice(obj_schema)
-            name = random.choice(names)
-            objs.append((cat, name))
+        for j in range(obj_per_room):
+            # Randomly pick an object type for each object
+            obj_entry = random.choice(obj_schema)
+            canonical = obj_entry["canonical"]
+            obj_counter[canonical] = obj_counter.get(canonical, 0) + 1
+            # Assign 1-2 random object attributes
+            n_attrs = random.randint(1, 2)
+            attrs = sample_object_attrs(n_attrs, seed=random.randint(0, 99999))
+            # Pick a display name from canonical + synonyms to avoid repetition
+            all_names = [canonical] + obj_entry["synonyms"]
+            display_name = all_names[j % len(all_names)]
+            objs.append({
+                "obj_id": obj_entry["oid"],
+                "canonical": canonical,
+                "synonyms": obj_entry["synonyms"],
+                "abbr": obj_entry["abbr"],
+                "attributes": attrs,
+                "name": f"{canonical}_{obj_counter[canonical]}",
+                "display_name": display_name,
+            })
         out[r] = objs
     return out
 
 
-def build_history_path(edges: List[Tuple[int, int]], steps: int, seed: int) -> List[int]:
-    """Generate a plausible movement path of length steps+1 over the graph."""
+def build_history_path(edges: List[Tuple[int, int]], steps: int, seed: int,
+                       n_rooms: int) -> List[Dict]:
+    """Generate a plausible movement history as a list of event dicts.
+
+    Each event: {"object": "Key", "from_room_idx": int, "to_room_idx": int}
+    """
     random.seed(seed)
     adj = {}
     for u, v in edges:
         adj.setdefault(u, []).append(v)
         adj.setdefault(v, []).append(u)
     cur = 0
-    path = [cur]
+    events = []
     for _ in range(steps):
         nxt = random.choice(adj.get(cur, [cur]))
-        path.append(nxt)
+        events.append({
+            "object": "Key",
+            "from_room_idx": cur,
+            "to_room_idx": nxt,
+        })
         cur = nxt
-    return path
+    return events
 
 
 def generate_world(scene_idx: int, seed: int = 1234) -> dict:
     """Generate a structured world dict for a given scene index.
 
-    Returns a dict with scene_name, gradient, rooms, edges, objects, history, rules.
-    This is the single source of truth — no text variants are generated here.
+    Uses knowledge base for all room/object types, attributes, synonyms.
+    Returns a dict with scene_name, gradient, rooms, objects, edges, history,
+    containment, parallel_rooms, parallel_objects, rules.
     """
     g = SCENE_TO_G.get(scene_idx, "G1")
     cfg = GRADIENTS[g]
@@ -178,27 +174,75 @@ def generate_world(scene_idx: int, seed: int = 1234) -> dict:
     scene_name = f"scene_complex_{scene_idx:02d}"
     room_ids = [f"R{i+1}" for i in range(n_rooms)]
 
-    types = sample_room_types(n_types, seed + 17)
-    room_type = [types[i % n_types] for i in range(n_rooms)]
+    # Sample room types from knowledge base
+    room_kb_entries = sample_rooms(n_types, seed + 17)
+    room_type_assign = [room_kb_entries[i % n_types] for i in range(n_rooms)]
 
+    # Assign room attributes (1 attribute per room)
+    room_attr_lists = []
+    for i in range(n_rooms):
+        n_attrs = random.Random(seed + 100 + i).randint(1, 2)
+        attrs = sample_room_attrs(n_attrs, seed + 200 + i)
+        room_attr_lists.append(attrs)
+
+    # Build positions
     pos = build_grid_positions(n_rooms, seed + 31)
 
+    # Build edges
     extra_loops = max(1, (scene_idx // 2))
     edges = build_edges_from_geometry(pos, seed + 43, extra_loops=extra_loops)
 
-    schema = sample_object_schema(obj_types, seed + 59)
-    objects = assign_objects_to_rooms(n_rooms, obj_per, schema, seed + 61)
+    # Sample object types from knowledge base
+    obj_kb_entries = sample_objects(obj_types, seed + 59)
 
-    hist_path = build_history_path(edges, steps=hist_steps, seed=seed + 71)
+    # Assign objects to rooms
+    objects = assign_objects_to_rooms(n_rooms, obj_per, obj_kb_entries, seed + 61,
+                                     list(range(n_types)))
 
+    # Build history
+    hist_events = build_history_path(edges, steps=hist_steps, seed=seed + 71,
+                                     n_rooms=n_rooms)
+
+    # Build room list with KB metadata
     rooms = []
     for i in range(n_rooms):
+        entry = room_type_assign[i]
         rooms.append({
             "idx": i,
             "room_id": room_ids[i],
-            "type": room_type[i],
+            "canonical": entry["canonical"],
+            "synonyms": entry["synonyms"],
+            "abbr": entry["abbr"],
+            "attributes": room_attr_lists[i],
             "x": pos[i][0],
             "y": pos[i][1],
+            "w": ROOM_WIDTH,
+            "h": ROOM_HEIGHT,
+        })
+
+    # Build containment relations: obj_name -> room_id
+    containment = {}
+    for r_idx, obj_list in objects.items():
+        for obj in obj_list:
+            containment[obj["name"]] = room_ids[r_idx]
+
+    # Build parallel room relations (rooms connected by edges)
+    parallel_rooms = [(room_ids[e[0]], room_ids[e[1]]) for e in edges]
+
+    # Build parallel object relations (objects in the same room)
+    parallel_objects = []
+    for r_idx, obj_list in objects.items():
+        for i in range(len(obj_list)):
+            for j in range(i + 1, len(obj_list)):
+                parallel_objects.append((obj_list[i]["name"], obj_list[j]["name"]))
+
+    # Build history in the new format
+    history = []
+    for evt in hist_events:
+        history.append({
+            "object": evt["object"],
+            "from_room": room_ids[evt["from_room_idx"]],
+            "to_room": room_ids[evt["to_room_idx"]],
         })
 
     rules = [
@@ -214,21 +258,34 @@ def generate_world(scene_idx: int, seed: int = 1234) -> dict:
         "rooms": rooms,
         "edges": edges,
         "objects": objects,
-        "history": hist_path,
+        "history": history,
+        "containment": containment,
+        "parallel_rooms": parallel_rooms,
+        "parallel_objects": parallel_objects,
         "rules": rules,
     }
 
 
 def generate_simple_world(scene_idx: int, seed: int = 1234) -> dict:
-    """Generate a small simple world (4-6 rooms) for R1 experiments."""
+    """Generate a small simple world (4-6 rooms) for R1 experiments.
+
+    Uses knowledge base for all room/object types, attributes, synonyms.
+    """
     n_rooms = 4 + (scene_idx % 3)  # 4-6 rooms
     scene_name = f"scene_simple_{scene_idx:02d}"
     room_ids = [f"R{i+1}" for i in range(n_rooms)]
 
     random.seed(seed)
-    # Simple room types for small scenes
-    simple_types = ["Entrance", "Kitchen", "Living Room", "Bedroom", "Bathroom", "Study"]
-    room_type = [simple_types[i % len(simple_types)] for i in range(n_rooms)]
+
+    # Sample room types from knowledge base
+    room_kb_entries = sample_rooms(n_rooms, seed + 17)
+    room_type_assign = [room_kb_entries[i % len(room_kb_entries)] for i in range(n_rooms)]
+
+    # Assign room attributes
+    room_attr_lists = []
+    for i in range(n_rooms):
+        attrs = sample_room_attrs(1, seed + 200 + i)
+        room_attr_lists.append(attrs)
 
     # Simple grid layout
     side = max(2, int(math.ceil(math.sqrt(n_rooms))))
@@ -245,29 +302,77 @@ def generate_simple_world(scene_idx: int, seed: int = 1234) -> dict:
     if n_rooms >= 4:
         edges.append((n_rooms - 1, 0))  # close the loop
 
-    # Simple objects
-    simple_obj_bank = [
-        ("Furniture", ["Sofa", "Table", "Chair", "Bed", "Desk"]),
-        ("Appliance", ["Fridge", "Microwave", "Oven"]),
-        ("Storage", ["Shelf", "Wardrobe", "Cabinet"]),
-    ]
+    # Sample objects from knowledge base
+    obj_kb_entries = sample_objects(3, seed + 59)
     objects = {}
+    obj_counter = {}
     for r in range(n_rooms):
-        objects[r] = [(random.choice(simple_obj_bank)[0],
-                       random.choice(random.choice(simple_obj_bank)[1]))
-                      for _ in range(2)]
+        objs = []
+        for j in range(2):
+            obj_entry = random.choice(obj_kb_entries)
+            canonical = obj_entry["canonical"]
+            obj_counter[canonical] = obj_counter.get(canonical, 0) + 1
+            attrs = sample_object_attrs(1, seed=random.randint(0, 99999))
+            all_names = [canonical] + obj_entry["synonyms"]
+            display_name = all_names[j % len(all_names)]
+            objs.append({
+                "obj_id": obj_entry["oid"],
+                "canonical": canonical,
+                "synonyms": obj_entry["synonyms"],
+                "abbr": obj_entry["abbr"],
+                "attributes": attrs,
+                "name": f"{canonical}_{obj_counter[canonical]}",
+                "display_name": display_name,
+            })
+        objects[r] = objs
 
     # Short history
-    hist = list(range(min(3, n_rooms)))
+    hist_events = []
+    for i in range(min(2, n_rooms - 1)):
+        hist_events.append({
+            "object": "Key",
+            "from_room_idx": i,
+            "to_room_idx": i + 1,
+        })
 
+    # Build room list
     rooms = []
     for i in range(n_rooms):
+        entry = room_type_assign[i]
         rooms.append({
             "idx": i,
             "room_id": room_ids[i],
-            "type": room_type[i],
+            "canonical": entry["canonical"],
+            "synonyms": entry["synonyms"],
+            "abbr": entry["abbr"],
+            "attributes": room_attr_lists[i],
             "x": pos[i][0],
             "y": pos[i][1],
+            "w": ROOM_WIDTH,
+            "h": ROOM_HEIGHT,
+        })
+
+    # Build containment
+    containment = {}
+    for r_idx, obj_list in objects.items():
+        for obj in obj_list:
+            containment[obj["name"]] = room_ids[r_idx]
+
+    # Build parallel relations
+    parallel_rooms = [(room_ids[e[0]], room_ids[e[1]]) for e in edges]
+    parallel_objects = []
+    for r_idx, obj_list in objects.items():
+        for i in range(len(obj_list)):
+            for j in range(i + 1, len(obj_list)):
+                parallel_objects.append((obj_list[i]["name"], obj_list[j]["name"]))
+
+    # Build history
+    history = []
+    for evt in hist_events:
+        history.append({
+            "object": evt["object"],
+            "from_room": room_ids[evt["from_room_idx"]],
+            "to_room": room_ids[evt["to_room_idx"]],
         })
 
     rules = [
@@ -282,6 +387,9 @@ def generate_simple_world(scene_idx: int, seed: int = 1234) -> dict:
         "rooms": rooms,
         "edges": edges,
         "objects": objects,
-        "history": hist,
+        "history": history,
+        "containment": containment,
+        "parallel_rooms": parallel_rooms,
+        "parallel_objects": parallel_objects,
         "rules": rules,
     }

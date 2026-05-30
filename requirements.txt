@@ -1,25 +1,37 @@
-# Core dependencies
-torch>=2.0.0
-transformers>=4.30.0
-accelerate>=0.20.0
-sentencepiece>=0.1.99
+# ==============================================================================
+# Navigation Planning LLM - Python Dependencies
+# ==============================================================================
+#
+# Core dependencies for dataset generation and validation:
+#   pip install -r requirements.txt
+#
+# For development (linting, testing, formatting):
+#   pip install -e ".[dev]"
+#
+# For local model inference (requires CUDA):
+#   pip install torch transformers accelerate
+# ==============================================================================
 
-# API clients
-openai>=1.0.0
-dashscope>=1.14.0
-
-# Data processing
+# --- Dataset Generation (no GPU required) ---
 numpy>=1.24.0
 pandas>=2.0.0
-scikit-learn>=1.3.0
 
-# Visualization
+# --- Visualization ---
 matplotlib>=3.7.0
 seaborn>=0.12.0
 
-# Utilities
+# --- Utilities ---
 tqdm>=4.65.0
 requests>=2.31.0
 
-# Optional: For local model inference
-# flash-attn>=2.0.0  # Requires CUDA
+# --- Local Model Inference (optional, requires GPU) ---
+# Uncomment below for local model inference:
+# torch>=2.0.0
+# transformers>=4.30.0
+# accelerate>=0.20.0
+# sentencepiece>=0.1.99
+
+# --- API-based Inference (optional) ---
+# Uncomment below for API-based inference:
+# openai>=1.0.0
+# dashscope>=1.14.0

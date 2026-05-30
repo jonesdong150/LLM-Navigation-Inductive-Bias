@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "The Sword, Shield, and Achilles' Heel: Characterizing the Linguistic Inductive Bias of Large Language Models for Spatial Reasoning in Navigation Planning"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Xudong
+message: "If you use this software, please cite it as below."
+keywords:
+  - spatial reasoning
+  - large language models
+  - navigation planning
+  - linguistic inductive bias
+  - knowledge base
+license: MIT
+repository-code: "https://github.com/yourusername/navigation-planning-llm"
