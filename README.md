@@ -250,11 +250,16 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{zhang2025sword,
-  title={The Sword, Shield, and Achilles' Heel: Characterizing the Linguistic Inductive Bias of Large Language Models for Spatial Reasoning in Navigation Planning},
-  author={Zhang, Xudong and others},
-  booktitle={Conference Name},
-  year={2025}
+@article{zhang2026sword,
+      title={The Sword, Shield, and Achilles' Heel: Characterizing the Linguistic Inductive Bias of Large Language Models for Spatial Reasoning in Navigation Planning},
+      author={Xudong Zhang and Jian Yang and Shengkai Wang and Jiangpeng Tian and Shaowen Chen and Xian Wei and Ke Li and Xiong You},
+      journal={arXiv preprint arXiv:2605.31404},
+      year={2026},
+      eprint={2605.31404},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2605.31404},
+      doi={10.48550/arXiv.2605.31404}
 }
 ```
 
